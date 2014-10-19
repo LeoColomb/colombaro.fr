@@ -1,0 +1,13 @@
+/* TEAM */
+Chef: Léo Colombaro
+Site: colombaro.fr
+Twitter: @LeoColomb
+GitHub: @LeoColomb
+Location: France
+
+/* SITE */
+Language: French
+Standards: HTML5, CSS3, JavaScript
+Components: Ruby, smothState.js
+Doctype: HTML5
+Software: Microsoft Visual Studio 14, Atom, Photoshop

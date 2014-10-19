@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /base
+Disallow: /assets
+Disallow: /divers
+Disallow: /cadeau
