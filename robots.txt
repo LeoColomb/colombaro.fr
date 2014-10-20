@@ -1,5 +1,3 @@
 User-agent: *
-Disallow: /base
-Disallow: /assets
-Disallow: /divers
-Disallow: /cadeau
+Allow: *
+Sitemap: http://colombaro.fr/sitemap.xml
