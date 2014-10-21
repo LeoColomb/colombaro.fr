@@ -1,56 +1,48 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    <meta name="author" content="{{ site.name }}" />
-    <meta name="description" content="{{ site.description }}">
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
-
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-          
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-          
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
-  </body>
+﻿<!DOCTYPE html>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <title>{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.name }} &middot; {{ site.description }}</title>
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="keywords" lang="fr" content="leo colombaro, colombaro, leocolomb, leo, léo, developpeur, graphisme, leocolombaro, technologie, clmb, numerique, informatique, computer, digital, creation, creations, code, open-souce, php, art, html, css, html5 css3, graphiste, decouverte, recherche, developpement" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <link rel="shortcut icon" href="{{ site.assetsurl }}/icon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.assetsurl }}/icon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.assetsurl }}/icon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.assetsurl }}/icon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.assetsurl }}/icon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.assetsurl }}/icon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.assetsurl }}/icon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.assetsurl }}/icon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.assetsurl }}/icon/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.assetsurl }}/icon/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" href="{{ site.assetsurl }}/icon/favicon-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="{{ site.assetsurl }}/icon/favicon-160x160.png" sizes="160x160" />
+  <link rel="icon" type="image/png" href="{{ site.assetsurl }}/icon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ site.assetsurl }}/icon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ site.assetsurl }}/icon/favicon-32x32.png" sizes="32x32" />
+  <meta name="msapplication-TileColor" content="#2b5797" />
+  <meta name="msapplication-TileImage" content="{{ site.assetsurl }}/icon/mstile-144x144.png" />
+  <meta name="msapplication-config" content="{{ site.assetsurl }}/icon/browserconfig.xml" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }} &middot; {{ site.description }}{% endif %}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:type" content="{% if page.post %}article{% else %}website{% endif %}" />
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image }}" />
+  {% endif %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@LeoColomb" />
+  <meta name="twitter:creator" content="@LeoColomb" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml" />
+  <link rel="author" type="text/plain" href="/humans.txt" />
+  <link rel="stylesheet" href="{{ site.assetsurl }}/css/{% if page.style %}{{ page.style }}{% else %}style{% endif %}.css" />
+</head>
+<body>
+  {{ content }}
+  <!--<script src="{{ site.assetsurl }}/js/script.js"></script>-->
+  {% include analytics.html %}
+</body>
 </html>
