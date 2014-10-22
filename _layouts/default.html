@@ -40,7 +40,7 @@
   <link rel="author" type="text/plain" href="/humans.txt" />
   <link rel="stylesheet" href="{{ site.assetsurl }}/css/{% if page.style %}{{ page.style }}{% else %}style{% endif %}.css" />
 </head>
-<body itemscope itemtype="http://schema.org/WebPage"{% if page.category %} class="{{ page.category }}"{% endif %}>
+<body{% if page.category %} class="{{ page.category }}"{% endif %}>
   {{ content }}
   <!--<script src="{{ site.assetsurl }}/js/script.js"></script>-->
   {% include analytics.html %}
