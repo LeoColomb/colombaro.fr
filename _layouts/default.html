@@ -28,7 +28,7 @@
   <meta name="msapplication-config" content="{{ site.assetsurl }}/icon/browserconfig.xml" />
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }} &middot; {{ site.description }}{% endif %}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:type" content="{% if page.post %}article{% else %}website{% endif %}" />
+  <meta property="og:type" content="{% if page.category == "post" %}article{% else %}website{% endif %}" />
   {% if page.image %}
   <meta property="og:image" content="{{ page.image }}" />
   {% endif %}
@@ -40,7 +40,7 @@
   <link rel="author" type="text/plain" href="/humans.txt" />
   <link rel="stylesheet" href="{{ site.assetsurl }}/css/{% if page.style %}{{ page.style }}{% else %}style{% endif %}.css" />
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage"{% if page.category %} class="{{ page.category }}"{% endif %}>
   {{ content }}
   <!--<script src="{{ site.assetsurl }}/js/script.js"></script>-->
   {% include analytics.html %}

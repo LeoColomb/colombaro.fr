@@ -83,4 +83,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      post: true
+      category: "blog"
