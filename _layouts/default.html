@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.name }} &middot; {{ site.description }}</title>
-  <meta name="author" content="{{ site.name }}" />
+  <meta name="author" content="{{ site.author }}" />
   <meta name="description" content="{{ site.description }}" />
   <meta name="keywords" lang="fr" content="leo colombaro, colombaro, leocolomb, leo, léo, developpeur, graphisme, leocolombaro, technologie, clmb, numerique, informatique, computer, digital, creation, creations, code, open-souce, php, art, html, css, html5 css3, graphiste, decouverte, recherche, developpement" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -42,9 +42,12 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="{{ site.assetsurl }}/css/{% if page.style %}{{ page.style }}{% else %}style{% endif %}.css" />
 </head>
-<body{% if page.category %} class="{{ page.category }}"{% endif %}>
+<body {% if page.category %}class="{{ page.category }}"{% endif %}>
   {{ content }}
   <!--<script src="{{ site.assetsurl }}/js/script.js"></script>-->
+  <footer role="contentinfo">
+    <p class="text-muted text-center"><small>© {{ site.time | date: "%Y" }} {{ site.author" }} — <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons License BY-NC-ND 4.0</a></small></p>
+  </footer>
   {% include analytics.html %}
 </body>
 </html>

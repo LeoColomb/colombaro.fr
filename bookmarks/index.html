@@ -1,0 +1,18 @@
+---
+title: Bookmarks
+layout: page
+---
+
+{% for pin in site.data.pins %}
+{% if pin.type == "quote" %}
+<blockquote>
+  <p>{{ pin.text }}</p>
+  <footer>{{ pin.author }}</footer>
+</blockquote>
+{% else %}
+<div>
+  <h2>{{ pin.name }}</h2>
+  <img src="{{ site.assetsurl }}/img/{{ pin.name | slugify }}.png" alt="{{ pin.name }}" />
+</div>
+{% endif %}
+{% endfor %}
