@@ -44,12 +44,12 @@ url: http://colombaro.fr
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
-assetsurl: "/_assets"
+assetsurl: "/assets"
 
 collections:
   trips:
-    permalink: /trips/:title/
-    layout: "trip"
+    output: true
+    permalink: /road/:title/
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -89,3 +89,10 @@ defaults:
     values:
       layout: "post"
       category: "blog"
+  -
+    scope:
+      path: ""
+      type: "trips"
+    values:
+      layout: "trip"
+      category: "road"

@@ -1,0 +1,12 @@
+---
+title: Road Trips
+layout: page
+---
+
+{% for trip in site.trips %}
+<a href="{{ trip.url }}">
+  <div>
+    <h2>{{ trip.title }}</h2>
+  </div>
+</a>
+{% endfor %}

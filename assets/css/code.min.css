@@ -1,0 +1,5 @@
+﻿/*!
+ * code.colombaro.fr
+ * MIT - 2014 L�o Colombaro
+ */
+body{padding-top:100px}.box{display:block;overflow:hidden;margin-bottom:30px;padding:15px;height:180px;border:1px solid #ddd;border-radius:4px;background:#fff;text-decoration:none}a.box:hover,a.box:focus,a.box:active{padding:12px;border-width:4px;border-color:#005e80;text-decoration:none}.site-header .box{height:390px;text-align:center}.stats{margin:0 0 2em;font-size:1.125em}footer.box{height:auto!important;padding-top:25px;margin-right:15px;margin-left:15px}.repo__name{margin:0 0 .1em;font-size:1.5em}.repo__info{display:block;margin:0 0 1.25em;color:#999;font-weight:bold;font-size:12px}.repo__desc{color:#666}.repo:after{position:absolute;top:0;right:15px;width:0;height:0;border-right:50px solid #333;border-bottom:50px solid transparent;border-left:50px solid transparent;content:'';pointer-events:none}.repo.php:after{border-right-color:#7ac9de}.repo.css:after{border-right-color:#c10}.repo.shell:after{border-right-color:#cc8300}.repo.c:after{border-right-color:#6aad2d}.repo.javascript:after{border-right-color:#0080b0}.repo.python:after{border-right-color:#5e197a}

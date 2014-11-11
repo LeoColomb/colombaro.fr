@@ -1,33 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Léo Colomb &hearts; Open Source</title>
-  <meta name="description" content="Find all my projects in one place." />
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/code.min.css" rel="stylesheet" />
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-4 col-sm-6 site-header" role="heading">
-        <div class="box">
-          <h1>Léo Colombaro</h1>
-          <p class="stats">
-            <a href="https://github.com/LeoColomb?tab=repositories"><b id="num-repos">View</b> public repositories</a>
-          </p>
-          <iframe src="http://ghbtns.com/github-btn.html?user=LeoColomb&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="143" height="20"></iframe>
-          <br />
-          <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=LeoColomb&show_count=false" allowtransparency="true" frameborder="0" scrolling="no" style="width: 138px; height: 20px;"></iframe>
-          <br />
-          <a class="small" href="http://git.colombaro.fr">Also on Bitbucket!</a>
-        </div>
+---
+title: Open Source
+layout: default
+style: code.min
+---
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-4 col-sm-6 site-header" role="heading">
+      <div class="box">
+        <h1>Léo Colombaro</h1>
+        <p class="stats">
+          <a href="https://github.com/LeoColomb?tab=repositories">View my public repositories</a>
+        </p>
+        <iframe src="http://ghbtns.com/github-btn.html?user=LeoColomb&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="143" height="20"></iframe>
+        <br />
+        <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=LeoColomb&show_count=false" allowtransparency="true" frameborder="0" scrolling="no" style="width: 138px; height: 20px;"></iframe>
       </div>
-      <div class="site-content" id="repos"></div>
+    </div>
+    <div class="site-content" id="repos">
+      {% for repo in site.github.public_repositories %}
+      <div class="col-lg-3 col-md-4 col-sm-6 repo {{ repo.language | slugify }}">
+        <a class="box" href="{% if repo.homepage %}{% if repo.homepage == "" %}{{ repo.html_url }}{% else %}{{ repo.homepage }}{% endif %}{% else %}{{ repo.html_url }}{% endif %}">
+          <h2 class="repo__name">{{ repo.name }}</h2>
+          <p class="repo__info">{{ repo.stargazers_count }} stargazers · {{ repo.language }}</p>
+          <p class="repo__desc">{{ repo.description }}</p>
+        </a>
+      </div>
+      {% endfor %}
     </div>
   </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-  <script src="assets/js/app.min.js"></script>
-</body>
-</html>
+</div>
