@@ -1,0 +1,18 @@
+- type: font
+  name: Source Code Pro
+  link: https://github.com/adobe-fonts/source-code-pro
+
+- type: quote
+  author: Guillaume Ansanay-Alex
+  link: https://twitter.com/carpewebem/status/496254645753614336
+  text: Interressant ce goût des commentateurs à imaginer que chaque nouvel usage doit remplacer un usage précédent. Sommes-nous si finis ?
+
+- type: quote
+  author: Daniel Kaplan
+  ref:
+  text: Il ne faut pas se contenter d'insister auprès des jeunes générations sur les risquent qu'il courent, mais les inciter à l'appropriation, leur apprendre à savoir gérer leur vie en ligne.
+
+- type: quote
+  author: Raymond Devos
+  ref:
+  text: ― Je n'ai rien à cacher !\n― Oui ! Mais faites en sorte que l'on ne découvre pas ce rien que vous ne cachez pas !
