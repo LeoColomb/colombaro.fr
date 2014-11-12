@@ -53,7 +53,6 @@ gems:
   - jemoji
   - jekyll-sitemap
   - jekyll-mentions
-  - jekyll-gist
   - jekyll-timeago
 
 # Excluded files
