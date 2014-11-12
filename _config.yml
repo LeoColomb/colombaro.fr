@@ -42,18 +42,17 @@ defaults:
       category: "road"
 
 # Engines
-markdown: kramdown
-highlighter: pygments
 permalink: /blog/:title/
+paginate: 10
+paginate_path: "blog/page/:num"
 sass:
   style: :compressed
 
 # Plugins
 gems:
   - jemoji
-  - jekyll-sitemap
   - jekyll-mentions
-  - jekyll-timeago
+  - jekyll-sitemap
 
 # Excluded files
 exclude:
