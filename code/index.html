@@ -3,13 +3,14 @@ title: Open Source
 layout: default
 style: code.min
 ---
+{% assign repos = site.github.public_repositories | sort: 'pushed_at' %}
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-md-4 col-sm-6 site-header" role="heading">
       <div class="box">
         <h1>Léo Colombaro</h1>
         <p class="stats">
-          <a href="https://github.com/LeoColomb?tab=repositories">View my public repositories</a>
+          <a href="https://github.com/LeoColomb?tab=repositories">{{ repos | size }} repositories</a>
         </p>
         <iframe src="http://ghbtns.com/github-btn.html?user=LeoColomb&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="143" height="20"></iframe>
         <br />
@@ -17,7 +18,7 @@ style: code.min
       </div>
     </div>
     <div class="site-content" id="repos">
-      {% for repo in site.github.public_repositories %}
+      {% for repo in repos reversed %}
       <div class="col-lg-3 col-md-4 col-sm-6 repo {{ repo.language | slugify }}">
         <a class="box" href="{% if repo.homepage %}{% if repo.homepage == "" %}{{ repo.html_url }}{% else %}{{ repo.homepage }}{% endif %}{% else %}{{ repo.html_url }}{% endif %}">
           <h2 class="repo__name">{{ repo.name }}</h2>

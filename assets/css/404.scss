@@ -1,11 +1,17 @@
 ---
 ---
 
+/*!
+ * {{ site.name }} v{{ site.version }}
+ * {{ site.url }}
+ * Copyright 2012-{{ site.time | date: "%Y" }} {{ site.author }}
+ * Licensed under MIT LICENSE
+ */
+
 //
-// IMPORTS
+// Page 404
 //
 
-@import "head";
 @import "reset";
 
 html {

@@ -1,17 +1,19 @@
 ---
 ---
 
+/*!
+ * {{ site.name }} v{{ site.version }}
+ * {{ site.url }}
+ * Copyright 2012-{{ site.time | date: "%Y" }} {{ site.author }}
+ * Licensed under MIT LICENSE
+ */
+
 //
-// IMPORTS
+// Global
 //
 
 @import "reset";
 @import "variables";
-// Syntax highlighting @import is at the bottom of this file
-
-/**************/
-/* BASE RULES */
-/**************/
 
 html {
   font-size: 100%;
