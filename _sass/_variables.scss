@@ -1,10 +1,12 @@
 
 //
-// VARIABLES
+// CATEGORIES
 //
 
 // Colors
-$blue: #4183C4;
+$homeColor: #ecd078;
+$categories: (code #d95b43) (about #c02942) (blog #542437) (road #53777a) (bookmarks #53777a);
+$amount: 40%;
 
 // Grays
 $black: #000;
@@ -14,14 +16,5 @@ $gray: #666;
 $lightGray: #eee;
 $white: #fff;
 
-// Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
-
-// Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
+// Animation
+$smooth: 250ms ease-in-out normal both;

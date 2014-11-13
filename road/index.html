@@ -4,7 +4,7 @@ layout: page
 ---
 
 {% for trip in site.trips %}
-<a href="{{ trip.url }}">
+<a href="{{ site.url }}{{ trip.url }}">
   <div>
     <h2>{{ trip.title }}</h2>
   </div>

@@ -23,7 +23,7 @@ collections:
   trips:
     output: true
     permalink: /road/:name/
-  people:
+  about:
     output: true
     permalink: /:name/
 
@@ -48,9 +48,10 @@ defaults:
   -
     scope:
       path: ""
-      type: "people"
+      type: "about"
     values:
       layout: "person"
+      title: "About"
       sitemap: false
 
 # Engines

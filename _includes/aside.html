@@ -1,28 +1,27 @@
-<aside class="col-sm-4">
+<div class="aside">
   <header role="banner">
-    <h1>{% if page.category %}{{ page.category | capitalize }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</h1>
+    <h1>
+      <a href="{{ site.url }}" role="button">{% if page.category %}{{ page.category | capitalize }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</a>
+    </h1>
     <p class="lead"></p>
   </header>
-  {% unless page.url == site.url %}
-  <a href="{{ site.url }}" class="btn" role="button"></a>
-  {% endunless %}
-  <nav role="navigation" class="sr-only">
-    <ol class="breadcrumb" role="navigation">
+  <nav class="sr-only" role="navigation">
+    <ol class="breadcrumb">
       <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
         <a href="{{ site.url }}" itemprop="url">
-          <span itemprop="title">Home</span>
+          <span itemprop="title">{{ site.name }}</span>
         </a>
       </li>
       {% if page.category %}
       <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-        <a href="{{ site.url }}/{{ page.category }}" itemprop="url">
+        <a href="{{ site.url }}/{{ page.category }}/" itemprop="url">
           <span itemprop="title">{{ page.category | capitalize }}</span>
         </a>
       </li>
       {% endif %}
       {% if page.title %}
       <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-        <a href="{{ page.url }}" itemprop="url">
+        <a href="{{ site.url }}{{ page.url }}" itemprop="url">
           <span itemprop="title">{{ page.title }}</span>
         </a>
       </li>
@@ -30,6 +29,6 @@
     </ol>
   </nav>
   <footer role="contentinfo">
-    <p class="text-muted"><small>© {{ site.time | date: "%Y" }} {{ site.author" }} — <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons License BY-NC-ND 4.0</a></small></p>
+    <p><small>© {{ site.time | date: "%Y" }} {{ site.author" }} — <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons License BY-NC-ND 4.0</a></small></p>
   </footer>
-</aside>
+</div>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8" />
-  <title>{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.name }} &middot; {{ site.description }}</title>
+  <title>{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.name }}</title>
   <meta name="author" content="{{ site.author }}" />
   <meta name="description" content="{{ site.description }}" />
   <meta name="keywords" lang="fr" content="leo colombaro, colombaro, leocolomb, leo, léo, developpeur, graphisme, leocolombaro, technologie, clmb, numerique, informatique, computer, digital, creation, creations, code, open-souce, php, art, html, css, html5 css3, graphiste, decouverte, recherche, developpement" />
@@ -35,19 +35,16 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@LeoColomb" />
   <meta name="twitter:creator" content="@LeoColomb" />
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %} &middot; {{ site.description }}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.name }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:type" content="{% if page.category %}article{% else %}website{% endif %}" />
   {% if page.image %}
   <meta property="og:image" content="{{ page.image }}" />
   {% endif %}
 </head>
-<body {% if page.category %}class="{{ page.category }}"{% endif %}>
+<body {% if page.category %}class="{{ page.category }}"{% elsif page.title %}class="{{ page.title | slugify }}"{% endif %}>
   {{ content }}
   <!--<script src="{{ site.assetsurl }}/js/script.js"></script>-->
-  <footer role="contentinfo">
-    <p class="text-muted text-center"><small>© {{ site.time | date: "%Y" }} {{ site.author" }} — <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons License BY-NC-ND 4.0</a></small></p>
-  </footer>
   {% include analytics.html %}
 </body>
 </html>

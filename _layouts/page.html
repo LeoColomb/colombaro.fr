@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-{% include aside.html %}
-<article class="content col-sm-8" role="article">
-  {{ content }}
-</article>
+<div id="content" class="smooth">
+  {% include aside.html %}
+  <main class="col-lg-6 col-md-7 col-sm-8 col-xs-offset-4" role="main">
+    {{ content }}
+  </main>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{{ site.assetsurl }}/js/jquery.smoothState.js"></script>
+<script src="{{ site.assetsurl }}/js/script.js"></script>

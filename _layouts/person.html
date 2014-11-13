@@ -1,13 +1,16 @@
 ---
 layout: page
 ---
-<img src="{{ page.image }}" alt="{{ page.title }}'s Avatar" class="img-circle" />
-<h2>{{ page.title }}</h2>
-<p class="lead">{{ page.subtitle }}</p>
+<div itemscope itemtype="http://data-vocabulary.org/Person">
+  <img src="{{ page.image }}" alt="{{ page.name }}'s Avatar" class="img-circle" itemprop="photo" />
+  <h2><span itemprop="name">{{ page.name }}</span> <small itemprop="nickname">{{ page.nickname }}</small></h2>
+  <a href="{{ site.url }}{{ page.url }}" alt="{{ page.name }}'s WebSite" class="sr-only" itemprop="url">{{ site.url }}{{ page.url }}</a>
+  <p class="lead" itemprop="title">{{ page.subtitle }}</p>
+</div>
 <small>{{ page.text }}</small>
 <div>
   {% for network in page.networks %}
-  <a href="{{ network[0] }}/{{ network[1] }}"><i class="{{ network[0] }}"></i></a>
+  <a href="{{ network[0] | replace: ':nickname', network[1] }}"><i class="{{ network[0] }}"></i></a>
   {% endfor %}
 </div>
 {{ content }}
