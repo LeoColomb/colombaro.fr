@@ -22,7 +22,10 @@ assetsurl: "/assets"
 collections:
   trips:
     output: true
-    permalink: /road/:title/
+    permalink: /road/:name/
+  people:
+    output: true
+    permalink: /:name/
 
 # Generation default options
 defaults:
@@ -33,6 +36,7 @@ defaults:
     values:
       layout: "post"
       category: "blog"
+      sitemap: false
   -
     scope:
       path: ""
@@ -40,9 +44,17 @@ defaults:
     values:
       layout: "trip"
       category: "road"
+      sitemap: false
+  -
+    scope:
+      path: ""
+      type: "people"
+    values:
+      layout: "person"
+      sitemap: false
 
 # Engines
-permalink: /blog/:title/
+permalink: /:categories/:title/
 paginate: 10
 paginate_path: "blog/page/:num"
 sass:
@@ -53,6 +65,7 @@ gems:
   - jemoji
   - jekyll-mentions
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Excluded files
 exclude:

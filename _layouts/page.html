@@ -1,28 +1,7 @@
 ---
 layout: default
 ---
-<nav role="navigation">
-  <ol class="breadcrumb" role="navigation">
-    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="{{ site.url }}" itemprop="url">
-        <span itemprop="title">Home</span>
-      </a>
-    </li>
-    {% if page.category %}
-    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="{{ site.url }}/{{ page.category }}" itemprop="url">
-        <span itemprop="title">{{ page.category | capitalize }}</span>
-      </a>
-    </li>
-    {% endif %}
-    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="{{ page.url }}" itemprop="url">
-        <span itemprop="title">{{ page.title }}</span>
-      </a>
-    </li>
-  </ol>
-</nav>
-<article class="page" role="article">
-  <h1>{{ page.title }}</h1>
+{% include aside.html %}
+<article class="content col-sm-8" role="article">
   {{ content }}
 </article>

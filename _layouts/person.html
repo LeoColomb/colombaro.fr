@@ -1,0 +1,13 @@
+---
+layout: page
+---
+<img src="{{ page.image }}" alt="{{ page.title }}'s Avatar" class="img-circle" />
+<h2>{{ page.title }}</h2>
+<p class="lead">{{ page.subtitle }}</p>
+<small>{{ page.text }}</small>
+<div>
+  {% for network in page.networks %}
+  <a href="{{ network[0] }}/{{ network[1] }}"><i class="{{ network[0] }}"></i></a>
+  {% endfor %}
+</div>
+{{ content }}
