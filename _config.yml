@@ -8,6 +8,7 @@ name: Créations Colombaro
 description: Léo Colombaro &middot; colombaro.fr
 version: 1.0.0
 author: Léo Colombaro
+color: "#0d0045"
 
 # Front Tools
 disqus:
