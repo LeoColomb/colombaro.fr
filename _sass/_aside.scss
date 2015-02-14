@@ -33,27 +33,18 @@
 
 .smooth {
   .aside {
-    -moz-animation: wipe $smooth;
-    -o-animation: wipe $smooth;
-    -webkit-animation: wipe $smooth;
-    animation: wipe $smooth;
+    @include animation(wipe $smooth);
 
     header,
     footer {
-      -moz-animation: fadeIn $smooth;
-      -o-animation: fadeIn $smooth;
-      -webkit-animation: fadeIn $smooth;
-      animation: fadeIn $smooth;
+      @include animation(fadeIn $smooth);
     }
   }
 
   &.is-exiting .aside,
   &.is-exiting .aside header,
   &.is-exiting .aside footer {
-    -moz-animation-direction: reverse;
-    -o-animation-direction: reverse;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+    @include animation-direction(reverse);
   }
 }
 
