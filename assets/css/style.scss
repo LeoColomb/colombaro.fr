@@ -48,6 +48,10 @@
 //@import "materialize/date_picker/default.date.scss";
 //@import "materialize/date_picker/default.time.scss";
 
+// Colors
+$homeColor: #ecd078;
+$categories: {% for cat in site.defaults %}({{ cat.values.d_name }} {{ cat.values.color }}) {% endfor %}(bookmarks #53777a);
+
 // Custom
 @import "categories";
 @import "aside";

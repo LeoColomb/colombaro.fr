@@ -19,6 +19,13 @@ url: http://colombaro.fr
 baseurl: ""
 assetsurl: "/assets"
 
+# Engines
+permalink: /:categories/:title/
+paginate: 10
+paginate_path: "blog/page/:num"
+sass:
+  style: :compressed
+
 # Collections
 collections:
   trips:
@@ -35,32 +42,43 @@ defaults:
       path: ""
       type: "posts"
     values:
+      d_name: "blog"
       layout: "post"
       category: "blog"
       sitemap: false
+      color: "#542437"
   -
     scope:
       path: ""
       type: "trips"
     values:
+      d_name: "road"
       layout: "trip"
       category: "road"
       sitemap: false
+      color: "#53777a"
   -
     scope:
       path: ""
       type: "about"
     values:
+      d_name: "about"
       layout: "person"
       title: "About"
       sitemap: false
-
-# Engines
-permalink: /:categories/:title/
-paginate: 10
-paginate_path: "blog/page/:num"
-sass:
-  style: :compressed
+      color: "#c02942"
+  -
+    scope:
+      path: "code"
+    values:
+      d_name: "code"
+      color: "#d95b43"
+  -
+    scope:
+      path: "bookmarks"
+    values:
+      d_name: "bookmarks"
+      color: "#53777a"
 
 # Plugins
 gems:
