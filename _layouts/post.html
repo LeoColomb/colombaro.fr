@@ -9,7 +9,6 @@ layout: page
       </div>
     </div>
   </nav>
-  <h2 itemprop="name">{{ page.title }}</h2>
   <p>
     <span itemprop="author">{{ site.author }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time> &middot; <span itemprop="wordCount">{{ content | number_of_words }}</span> words
   </p>

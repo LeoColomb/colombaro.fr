@@ -50,7 +50,7 @@
 
 // Colors
 $homeColor: #ecd078;
-$categories: {% for cat in site.defaults %}({{ cat.values.d_name }} {{ cat.values.color }}) {% endfor %}(bookmarks #53777a);
+$categories: {% for cat in site.defaults %}({{ cat.values.d_name }} {{ cat.values.color }}){% endfor %};
 
 // Custom
 @import "categories";
