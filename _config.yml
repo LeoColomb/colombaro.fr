@@ -93,3 +93,4 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - bower.json

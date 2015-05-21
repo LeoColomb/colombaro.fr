@@ -1,0 +1,14 @@
+{
+  "name": "leocolomb.github.io",
+  "version": "1.0.0",
+  "homepage": "http://colombaro.fr",
+  "private": true,
+  "authors": [
+    "Léo Colombaro"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "materialize": "*",
+    "smoothstate": "*"
+  }
+}

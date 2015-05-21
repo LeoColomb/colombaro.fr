@@ -236,6 +236,7 @@
                 object[url] = { // Content is indexed by the url
                     status: "loaded",
                     title: $html.find("title").text(), // Stores the title of the page
+                    color: $html.find("meta[name=theme-color]").attr("content"),
                     html: $html // Stores the contents of the page
                 };
                 return object;
@@ -407,6 +408,7 @@
 
                     if($content) {
                         document.title = cache[url].title;
+                        $("meta[name=theme-color]").attr("content", cache[url].color);
                         $container.data("smoothState").href = url;
                         
                         // Call the onEnd callback and set trigger

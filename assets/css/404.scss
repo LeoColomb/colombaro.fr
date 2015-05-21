@@ -79,7 +79,7 @@ a:hover {
   padding: 40px;
   background-color: #5f9ea0;
   box-shadow: inset -10px -30px rgba(0,0,0,.06);
-  @include border-radius(50%);
+  border-radius: 50%;
   @include transform-origin(center bottom);
   transition: padding .3s,bottom .3s;
   @include animation(bobble 5s ease-in-out infinite);
@@ -116,7 +116,7 @@ a:hover {
   height: 15px;
   margin: 0 5px 5px;
   background: rgba(0,0,0,.9);
-  @include border-radius(50%);
+  border-radius: 50%;
   @include animation(blink 4s ease-in-out infinite);
 }
 
