@@ -54,11 +54,5 @@ $categories: {% for cat in site.defaults %}({{ cat.values.d_name }} {{ cat.value
 
 // Custom
 @import "categories";
-@import "aside";
-
-#content {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
+@import "smooth";
 @import "highlights";

@@ -1,6 +1,6 @@
 
 //
-// ASIDE
+// HEADER
 //
 
 @each $category in $categories {
@@ -8,16 +8,27 @@
   $color: nth($category, 2);
 
   .#{$type} {
-    h2 {
-      color: darken($color, ($amount / 4));
+    header, nav {
+      background: $color;
+    }
+    
+    main {
+      h1, h2, a, strong {
+        color: darken($color, ($amount / 4));
+      }
     }
 
-    .aside {
-      background: $color;
-
-      footer,
-      footer a {
-        color: lighten($color, $amount);
+    footer {
+      &, &.page-footer {
+        background: darken($color, ($amount / 5));
+      }
+      
+      a {
+        color: lighten($color, ($amount / 1));
+        
+        &:active, &:hover, &:focus {
+          color: lighten($color, ($amount / 3));
+        }
       }
     }
   }

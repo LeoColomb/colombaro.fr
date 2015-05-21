@@ -19,6 +19,6 @@
       render: (url, $container) ->
         content.toggleAnimationClass "is-exiting"
         return
-  ).data("smoothState")
+  ).data "smoothState"
   return
 ) jQuery

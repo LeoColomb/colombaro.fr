@@ -8,7 +8,9 @@
   <meta name="keywords" lang="fr" content="leo colombaro, colombaro, leocolomb, leo, léo, developpeur, graphisme, leocolombaro, technologie, clmb, numerique, informatique, computer, digital, creation, creations, code, open-souce, php, art, html, css, html5 css3, graphiste, decouverte, recherche, developpement" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <!-- TODO: A ENLEVER - TO BE DELETED -->
+  {% if page.style %}
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  {% endif %}
   <link rel="stylesheet" href="{{ site.assetsurl }}/css/{% if page.style %}{{ page.style }}{% else %}style{% endif %}.css" />
   <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml" />

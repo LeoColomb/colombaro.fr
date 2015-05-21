@@ -1,0 +1,75 @@
+
+//
+// SMOOTH
+//
+
+.smooth {
+  header nav {
+    @include animation(wipe $smooth);
+  }
+
+  &.is-exiting header nav {
+    @include animation-direction(reverse);
+  }
+}
+
+
+@-moz-keyframes wipe {
+  0% {
+    height: 100vh;
+  }
+
+  100% {
+    height: $navbar-height;
+  }
+}
+
+@-webkit-keyframes wipe {
+  0% {
+    height: 100vh;
+  }
+
+  100% {
+    height: $navbar-height;
+  }
+}
+
+@keyframes wipe {
+  0% {
+    height: 100vh;
+  }
+
+  100% {
+    height: $navbar-height;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
