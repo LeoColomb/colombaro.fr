@@ -1,12 +1,12 @@
-<header role="banner" class="navbar-fixed">
+<header role="banner">
   <nav role="navigation">
-    <div class="container">
-      <div class="nav-wrapper">
-        <a href="{{ site.url }}" role="button" class="brand-logo center">{% if page.category %}{{ page.category | capitalize }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="/">Back</a></li>
-        </ul>
-        <ul class="breadcrumb sr-only">
+    <div class="head-container">
+      <div class="head-wrapper">
+        <a href="{{ site.url }}" role="button" class="head-logo">{{ site.name }}</a>
+        <!--<ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="{{ site.url }}">Back</a></li>
+        </ul>-->
+        <ul class="sr-only">
           <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
             <a href="{{ site.url }}" itemprop="url">
               <span itemprop="title">{{ site.name }}</span>
@@ -19,7 +19,7 @@
             </a>
           </li>
           {% endif %}
-          {% if page.title %}
+          {% if page.title | slugify != page.category %}
           <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
             <a href="{{ site.url }}{{ page.url }}" itemprop="url">
               <span itemprop="title">{{ page.title }}</span>

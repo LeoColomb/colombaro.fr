@@ -2,16 +2,15 @@
 layout: page
 ---
 <article role="article" itemscope itemtype="http://schema.org/Article">
-  <nav>
-    <div class="container">
-      <div class="nav-wrapper">
-        <h2 class="page-title" itemprop="name">{{ page.title }}</h2>
-      </div>
-    </div>
-  </nav>
+  <h1 class="page-title" itemprop="name">{{ page.title }}</h1>
   <p>
     <span itemprop="author">{{ site.author }}</span> on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time> &middot; <span itemprop="wordCount">{{ content | number_of_words }}</span> words
   </p>
   {{ content }}
 </article>
 {% include disqus.html disqus_identifier=page.disqus_identifier %}
+<div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
+  <a href="#top" class="btn-floating btn-large">
+    <i class="large mdi-editor-mode-edit">i</i>
+  </a>
+</div>

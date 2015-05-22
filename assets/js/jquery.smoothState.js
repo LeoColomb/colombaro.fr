@@ -108,10 +108,12 @@
             /**
              * Checks to see if the url is an internal hash
              * @param   {string}    url - url being evaluated
+             * @param   {string}    prev - previous url (optional)
              * 
              */
-            isHash: function (url) {
-                var hasPathname = (url.indexOf(window.location.pathname) > 0) ? true : false,
+            isHash: function (url, prev) {
+                prev = prev || window.location.pathname;
+                var hasPathname = (url.indexOf(prev) >= 0) ? true : false,
                     hasHash = (url.indexOf("#") > 0) ? true : false;
                 return (hasPathname && hasHash) ? true : false;
             },
@@ -236,7 +238,6 @@
                 object[url] = { // Content is indexed by the url
                     status: "loaded",
                     title: $html.find("title").text(), // Stores the title of the page
-                    color: $html.find("meta[name=theme-color]").attr("content"),
                     html: $html // Stores the contents of the page
                 };
                 return object;
@@ -295,7 +296,7 @@
                     $page   = $("#" + e.state.id),
                     page    = $page.data("smoothState");
                 
-                if(page.href !== url && !utility.isHash(url)) {
+                if(page.href !== url && !utility.isHash(url, page.href)) {
                     page.load(url, true);
                 }
             }
@@ -408,14 +409,13 @@
 
                     if($content) {
                         document.title = cache[url].title;
-                        $("meta[name=theme-color]").attr("content", cache[url].color);
                         $container.data("smoothState").href = url;
                         
                         // Call the onEnd callback and set trigger
-                        options.onEnd.render(url, $container, $content);
+                        options.onEnd.render(url, $container, $content, cache[url].html);
 
                         $container.one("ss.onEndEnd", function(){
-                            options.callback(url, $container, $content);
+                            options.callback(url, $container, $content, cache[url].html);
                         });
 
                         setTimeout(function(){
@@ -448,7 +448,7 @@
                     cache[url] = { status: "fetching" };
 
                     var requestUrl  = options.alterRequestUrl(url) || url,
-                        request     = $.ajax(requestUrl);
+                        request     = $.ajax(requestUrl, { dataType: "html" });
 
                     // Store contents in cache variable if successful
                     request.success(function (html) {

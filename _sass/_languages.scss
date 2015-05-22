@@ -1,0 +1,29 @@
+
+//
+// LANGUAGES COLORS
+//
+
+@each $language in $languages {
+  $type: nth($language, 1);
+  $colorName: nth($language, 2);
+  $colorBase: nth($language, 3);
+  $color: color($colorName, $colorBase);
+  
+  .#{$type}.card {
+    background: $color;
+    
+    .card-action {
+      a {
+        color: lighten($color, $amount);
+        
+        &:hover, &:focus, &:active {
+          color: lighten($color, ($amount / 2));
+        }
+      }
+      
+      span {
+        color: lighten($color, ($amount / 4));
+      }
+    }
+  }
+}

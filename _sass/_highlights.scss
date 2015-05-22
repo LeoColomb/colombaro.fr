@@ -6,7 +6,7 @@
 code {
   font-family: 'Courier', monospace;
   font-size: 14px;
-  color: #999;
+  color: color("grey", "base");
 }
 
 pre {
@@ -16,7 +16,7 @@ pre {
 }
 
 .highlight {
-  background-color: $darkerGray;
+  background-color: color("grey", "darken-4");
   padding: 5px 10px;
   margin: 20px 0;
   // Comment

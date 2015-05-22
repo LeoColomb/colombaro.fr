@@ -20,7 +20,7 @@ baseurl: ""
 assetsurl: "/assets"
 
 # Engines
-permalink: /:categories/:title/
+permalink: /blog/:title/
 paginate: 10
 paginate_path: "blog/page/:num"
 sass:
@@ -42,43 +42,45 @@ defaults:
       path: ""
       type: "posts"
     values:
-      d_name: "blog"
-      layout: "post"
       category: "blog"
+      layout: "post"
       sitemap: false
       color: "#542437"
+      anim: "wipeH"
   -
     scope:
-      path: ""
-      type: "trips"
+      path: "road"
     values:
-      d_name: "road"
-      layout: "trip"
       category: "road"
+      layout: "trip"
       sitemap: false
       color: "#53777a"
+      anim: "wipeV"
   -
     scope:
       path: ""
       type: "about"
     values:
-      d_name: "about"
+      category: "about"
       layout: "person"
       title: "About"
       sitemap: false
       color: "#c02942"
+      anim: "cerclize"
   -
     scope:
       path: "code"
     values:
-      d_name: "code"
+      category: "code"
       color: "#d95b43"
+      anim: "cerclize"
   -
     scope:
       path: "bookmarks"
     values:
-      d_name: "bookmarks"
-      color: "#53777a"
+      category: "bookmarks"
+      color: "#ecd078"
+      anim: "cerclize"
 
 # Plugins
 gems:

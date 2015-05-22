@@ -3,18 +3,10 @@ layout: default
 ---
 <div id="content" class="smooth">
   {% include header.html %}
-  <main class="row" role="main">
-    <div class="container">
-      {{ content }}
-    </div>
+  <main role="main">
+    {{ content }}
   </main>
-  <footer role="contentinfo" class="page-footer">
-    <div class="footer-copyright">
-      <div class="container">
-        © {{ site.time | date: "%Y" }} {{ site.author }} — <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">C<span class="hide-on-med-and-down">reative </span>C<span class="hide-on-med-and-down">ommons License</span> BY-NC-ND 4.0</a>
-      </div>
-    </div>
-  </footer>
+  {% include footer.html %}
 </div>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="{{ site.assetsurl }}/js/jquery.smoothState.js"></script>

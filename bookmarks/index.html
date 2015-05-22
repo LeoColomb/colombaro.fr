@@ -7,11 +7,11 @@ layout: page
 {% if pin.type == "quote" %}
 <blockquote>
   <p>{{ pin.text }}</p>
-  <footer>{{ pin.author }}</footer>
+  <small>{{ pin.author }}</small>
 </blockquote>
 {% else %}
 <div>
-  <h2>{{ pin.name }}</h2>
+  <p>{{ pin.name }}</p>
   <img src="{{ site.assetsurl }}/img/{{ pin.name | slugify }}.png" alt="{{ pin.name }}" />
 </div>
 {% endif %}

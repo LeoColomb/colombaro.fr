@@ -1,0 +1,43 @@
+
+//
+// BLOG PAGE
+//
+
+.blog {
+  #content {
+    @extend .row;
+  
+    header {
+      @extend .col;
+      @extend .s12;
+      @extend .m4;
+      @extend .l3;
+      min-height: 100vh;
+      padding: 0;
+      
+      nav {
+        @extend .col;
+        @extend .s12;
+        @extend .m4;
+        @extend .l3;
+        position: fixed;
+        height: 100vh;
+      }
+    }
+  }
+  
+  main {
+    @extend .col;
+    @extend .s12;
+    @extend .m8;
+    @extend .l9;
+    margin-top: $marge-top;
+  }
+  
+  footer {
+    @extend .col;
+    @extend .s12;
+    @extend .m4;
+    @extend .l3;
+  }
+}

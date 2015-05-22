@@ -45,7 +45,7 @@
   <meta property="og:image" content="{{ page.image }}" />
   {% endif %}
 </head>
-<body {% if page.category %}class="{{ page.category }}"{% elsif page.title %}class="{{ page.title | slugify }}"{% endif %}>
+<body{% if page.category %} class="{{ page.category }}"{% endif %}>
   {{ content }}
   <!--<script src="{{ site.assetsurl }}/js/script.js"></script>-->
   {% include analytics.html %}

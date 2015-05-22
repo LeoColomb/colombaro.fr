@@ -49,10 +49,18 @@
 //@import "materialize/date_picker/default.time.scss";
 
 // Colors
-$homeColor: #ecd078;
-$categories: {% for cat in site.defaults %}({{ cat.values.d_name }} {{ cat.values.color }}){% endfor %};
+$categories: 
+  ("home" #263238 "whoua")
+  {% for cat in site.defaults %}
+  ({{ cat.values.category }} {{ cat.values.color }} {{ cat.values.anim }})
+  {% endfor %};
 
 // Custom
-@import "categories";
+@import "categories/categories";
+@import "categories/home";
+{% for cat in site.defaults %}
+@import "categories/{{ cat.values.category }}";
+{% endfor %};
 @import "smooth";
+@import "languages";
 @import "highlights";

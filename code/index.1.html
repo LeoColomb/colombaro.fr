@@ -1,0 +1,30 @@
+---
+title: Code
+layout: page
+---
+{% assign repos = site.github.public_repositories | sort: 'pushed_at' %}
+<div class="row">
+  {% for repo in repos reversed %}
+  <div class="col s12 m6 l4">
+    {% if repo.language %}
+    <div class="card {{ repo.language | slugify }}">
+    {% else %}
+    <div class="card unknow">
+    {% endif %}
+      <div class="card-content white-text">
+        <span class="card-title">{{ repo.name }}</span>
+        <p>{{ repo.description }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{{ repo.html_url }}">GitHub</a>
+        {% if repo.homepage == "" %}{% elsif repo.homepage %}
+        <a href="{{ repo.homepage }}">Website</a>
+        {% endif %}
+        <span class="right">{{ repo.language }}</small>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<a href="https://github.com/LeoColomb?tab=repositories">{{ repos | size }} repositories</a>
+ 
