@@ -1,0 +1,13 @@
+<aside>
+  <ul>
+    {% if page.next %}
+    <li class="next"><a href="{{ page.next.url }}">{{ page.next.title }}</a></li>
+    {% endif %}
+    {% for post in site.related_posts limit:3 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <time>{{ post.date | date_to_string }}</time>
+    </li>
+    {% endfor %}
+  </ul>
+</aside>
