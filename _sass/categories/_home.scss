@@ -6,12 +6,12 @@
 .home {
   header nav {
     height: 100vh;
-    
+
     .head-wrapper {
       @extend .valign-wrapper;
       height: 100vh;
     }
-        
+
     .head-logo {
       @extend h1;
       width: 30%;
@@ -20,42 +20,42 @@
       @extend .valign;
     }
   }
-  
+
   .main-container {
     display: block;
     position: relative;
     height: 40vh;
     padding: 15vh;
     z-index: 400;
-    
+
     h2 {
       float: left;
       @include transition(color .3s ease-in-out);
     }
-    
+
     .container {
       @include transition(transform .3s ease-in-out);
     }
-    
+
     &:hover, &:active, &:focus {
       z-index: 500;
       will-change: transform, height, box-shadow;
       //@extend .waves-effect;
-      
+
       .container {
         @include transform(translate(-20px));
       }
     }
-    
+
     &.smooth-exit {
       z-index: 600;
     }
-    
+
     &:nth-child(2n) {
       h2 {
         float: right;
       }
-      
+
       &:hover, &:active, &:focus {
         .container {
           @include transform(translate(20px));

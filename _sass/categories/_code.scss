@@ -7,11 +7,11 @@
   #content {
     padding-top: $marge-top;
   }
-  
+
   header {
     @extend .container;
     @extend .row;
-    
+
     nav {
       @extend .card;
       @extend .col;
@@ -20,7 +20,7 @@
       min-height: 20vh;
     }
   }
-  
+
   main {
     @extend .container;
   }

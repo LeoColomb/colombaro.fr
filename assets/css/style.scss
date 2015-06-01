@@ -48,8 +48,13 @@
 //@import "materialize/date_picker/default.date.scss";
 //@import "materialize/date_picker/default.time.scss";
 
+// Typography
+@import "typography/mixins";
+//@import "typography/fonts";
+@import "typography/opentype";
+
 // Colors
-$categories: 
+$categories:
   ("home" #263238 "whoua")
   {% for cat in site.defaults %}
   ({{ cat.values.category }} {{ cat.values.color }} {{ cat.values.anim }})

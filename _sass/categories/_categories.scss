@@ -3,55 +3,51 @@
 // CATEGORIES COLORS
 //
 
-@each $category in $categories {
-  $type: nth($category, 1);
-  $color: nth($category, 2);
-  $anim: nth($category, 3);
-
+@each $type, $color, $anim in $categories {
   .#{$type} {
     .smooth header nav {
       @include animation($anim $smooth);
     }
-    
+
     .smooth.to#{$type} &.main-container, .smooth.from#{$type} &.main-container {
       @include animation(exit $smooth);
     }
-    
+
     header nav, &.main-container {
       background: $color;
     }
-    
+
     &.main-container {
       h2, strong {
         color: darken($color, ($amount / 3));
       }
-      
+
       &:hover, &:active, &:focus {
         h2, strong {
           color: darken($color, $amount);
         }
       }
     }
-    
+
     .btn-floating {
       background: darken($color, ($amount / 4));
     }
-    
+
     main, {
       h1, h2, a, strong {
         color: darken($color, ($amount / 4));
       }
-      
+
       a {
         &:active, &:hover, &:focus {
           color: darken($color, ($amount / 3));
         }
-        
+
         &:visited {
           color: darken($color, ($amount / 1));
         }
       }
-      
+
       blockquote {
         border-left-color: darken($color, ($amount / 4));
       }
@@ -61,14 +57,14 @@
       &, &.page-footer {
         background: darken($color, ($amount / 5));
       }
-      
+
       a {
         color: lighten($color, ($amount / 1));
-        
+
         &:active, &:hover, &:focus {
           color: lighten($color, ($amount / 3));
         }
-        
+
         &:visited {
           color: $color;
         }

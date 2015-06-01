@@ -1,14 +1,22 @@
+- type: quote
+  author: Paul Mathias
+  date: 2015
+  link: https://www.youtube.com/watch?v=n2UNJesD2zQ&t=2m58s
+  text: "Le code n'est pas un simple langage technique, le code est une manière d'exprimer des choix de société."
+
 - type: font
   name: Source Code Pro
   link: https://github.com/adobe-fonts/source-code-pro
 
 - type: quote
   author: Guillaume Ansanay-Alex
+  date: 2014
   link: https://twitter.com/carpewebem/status/496254645753614336
   text: "Interressant ce goût des commentateurs à imaginer que chaque nouvel usage doit remplacer un usage précédent. Sommes-nous si finis ?"
 
 - type: quote
   author: Daniel Kaplan
+  date: 2012
   ref:
   text: "Il ne faut pas se contenter d'insister auprès des jeunes générations sur les risquent qu'il courent, mais les inciter à l'appropriation, leur apprendre à savoir gérer leur vie en ligne."
 

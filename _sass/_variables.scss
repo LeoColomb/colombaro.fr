@@ -14,6 +14,12 @@ $languages:
   ("python" "light-blue" "darken-4")
   ("shell" "blue-grey" "darken-3");
 
+// Fonts
+$font-path: "../fonts";
+//$font-face-body: "Roboto";
+$font-face-code: "FiraCode";
+//$font-faces: $font-face-body $font-face-code;
+
 // Animation
 $smooth: 250ms linear both;
 

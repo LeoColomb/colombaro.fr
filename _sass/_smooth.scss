@@ -20,7 +20,7 @@
     from {
       #{$prop}: $init;
     }
-  
+
     to {
       #{$prop}: $final;
     }
@@ -37,14 +37,14 @@
     border-radius: 0;
     margin: 0 auto 0;
   }
-  
+
   50% {
     width: 100vh;
     height: 100vh;
     border-radius: 50%;
     margin: -10vh auto 20vh;
   }
-  
+
   100% {
     width: 150px;
     height: 150px;
@@ -59,7 +59,7 @@
     margin-bottom: 0;
     box-shadow: none;
   }
-  
+
   10% {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
   }
