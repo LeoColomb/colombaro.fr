@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
   {% endif %}
   <link rel="stylesheet" href="{{ site.assetsurl }}/css/{% if page.style %}{{ page.style }}{% else %}style{% endif %}.css" />
-  <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
-  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml" />
+  {% feed_meta %}
   <link rel="author" type="text/plain" href="/humans.txt" />
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <link rel="shortcut icon" href="{{ site.assetsurl }}/icon/favicon.ico" />

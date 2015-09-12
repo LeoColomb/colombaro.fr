@@ -87,6 +87,7 @@ gems:
   - jemoji
   - jekyll-mentions
   - jekyll-sitemap
+  - jekyll-feed
   - jekyll-redirect-from
 
 # Excluded files
