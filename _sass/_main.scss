@@ -19,3 +19,8 @@ a {
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+//
+.smooth-loading {
+  pointer-events: none;
+}
