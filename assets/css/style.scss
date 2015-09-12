@@ -4,7 +4,7 @@
 /*!
  * {{ site.name }} v{{ site.version }}
  * {{ site.url }}
- * Copyright 2012-{{ site.time | date: "%Y" }} {{ site.author }}
+ * Copyright 2012-{{ site.time | date: "%Y" }} {{ site.author.name }}
  * Licensed under MIT LICENSE
  */
 
