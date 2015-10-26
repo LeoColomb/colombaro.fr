@@ -24,16 +24,14 @@
   .main-container {
     display: block;
     position: relative;
-    height: 40vh;
-    padding: 15vh;
+    padding: 10vh;
     z-index: 400;
 
     h2 {
-      float: left;
       @include transition(color .3s ease-in-out);
     }
 
-    .container {
+    .ico-go {
       @include transition(transform .3s ease-in-out);
     }
 
@@ -42,7 +40,7 @@
       will-change: transform, height, box-shadow;
       //@extend .waves-effect;
 
-      .container {
+      .ico-go {
         @include transform(translate(-20px));
       }
     }
@@ -51,13 +49,8 @@
       z-index: 600;
     }
 
-    &:nth-child(2n) {
-      h2 {
-        float: right;
-      }
-
       &:hover, &:active, &:focus {
-        .container {
+        .ico-go {
           @include transform(translate(20px));
         }
       }
