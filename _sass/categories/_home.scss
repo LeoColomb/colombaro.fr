@@ -41,19 +41,12 @@
       //@extend .waves-effect;
 
       .ico-go {
-        @include transform(translate(-20px));
+        @include transform(translate(20px));
       }
     }
 
     &.smooth-exit {
       z-index: 600;
-    }
-
-      &:hover, &:active, &:focus {
-        .ico-go {
-          @include transform(translate(20px));
-        }
-      }
     }
   }
 
