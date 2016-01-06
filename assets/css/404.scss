@@ -12,8 +12,7 @@
 // PAGE 404
 //
 @charset "UTF-8";
-@import "normalize";
-@import "materialize/prefixer";
+@import "vendor/normalize";
 
 html {
   height: 100%;
@@ -80,9 +79,9 @@ a:hover {
   background-color: #5f9ea0;
   box-shadow: inset -10px -30px rgba(0,0,0,.06);
   border-radius: 50%;
-  @include transform-origin(center bottom);
+  transform-origin: center bottom;
   transition: padding .3s,bottom .3s;
-  @include animation(bobble 5s ease-in-out infinite);
+  animation: bobble 5s ease-in-out infinite;
 }
 
 .creature-main {
@@ -93,7 +92,7 @@ a:hover {
   }
 
   &:hover {
-    @include transform(translateY(-10px));
+    transform: translateY(-10px);
 
     .headhead {
       padding: 35px 40px;
@@ -102,11 +101,11 @@ a:hover {
 }
 
 .click-anim {
-  @include transition(.3s cubic-bezier(.15,.6,.3,1.9));
-  @include transform-origin(center bottom);
+  transition: .3s cubic-bezier(.15,.6,.3,1.9);
+  transform-origin: center bottom;
 
   &:hover {
-    @include scale(1.1);
+    transform: scale(1.1);
   }
 }
 
@@ -117,7 +116,7 @@ a:hover {
   margin: 0 5px 5px;
   background: rgba(0,0,0,.9);
   border-radius: 50%;
-  @include animation(blink 4s ease-in-out infinite);
+  animation: blink 4s ease-in-out infinite;
 }
 
 .mouth {
@@ -130,7 +129,7 @@ a:hover {
   overflow: hidden;
   line-height: 0;
   transition: border-radius .5s,height .5s cubic-bezier(.15,.6,.3,1.9);
-  @include transform-origin(center top);
+  transform-origin: center top;
 }
 
 .teeth:after,
@@ -143,63 +142,24 @@ a:hover {
   background: #eee;
 }
 
-@-moz-keyframes bobble {
-  33% {
-    @include rotate(5deg);
-  }
-
-  66% {
-    @include rotate(-5deg);
-  }
-}
-
-@-webkit-keyframes bobble {
-  33% {
-    @include rotate(5deg);
-  }
-
-  66% {
-    @include rotate(-5deg);
-  }
-}
 
 @keyframes bobble {
   33% {
-    @include rotate(5deg);
+    transform: rotate(5deg);
   }
 
   66% {
-    @include rotate(-5deg);
-  }
-}
-
-@-moz-keyframes blink {
-  90% {
-    @include transform(none);
-  }
-
-  95% {
-    @include transform(rotateX(90deg));
-  }
-}
-
-@-webkit-keyframes blink {
-  90% {
-    @include transform(none);
-  }
-
-  95% {
-    @include transform(rotateX(90deg));
+    transform: rotate(-5deg);
   }
 }
 
 @keyframes blink {
   90% {
-    @include transform(none);
+    transform: none;
   }
 
   95% {
-    @include transform(rotateX(90deg));
+    transform: rotateX(90deg);
   }
 }
 

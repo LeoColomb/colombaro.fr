@@ -4,28 +4,16 @@
 //
 
 .code {
-  #content {
-    padding-top: $marge-top;
-  }
 
   header {
-    @extend .container;
-    @extend .row;
 
     nav {
-      @extend .card;
-      @extend .col;
-      @extend .s12;
-      @extend .l6;
-      min-height: 20vh;
     }
   }
 
   main {
-    @extend .container;
   }
 
   footer {
-    text-align: center;
   }
 }

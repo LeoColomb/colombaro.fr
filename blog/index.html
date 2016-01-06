@@ -17,15 +17,15 @@ category: blog
 {% if paginator.total_pages > 1 %}
 <nav>
   {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a>
+  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span aria-hidden="true">&laquo;</span><span class="show-for-sr">Previous</span></a>
   {% else %}
-  <button class="disabled"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></button>
+  <button class="disabled"><span aria-hidden="true">&laquo;</span><span class="show-for-sr">Previous</span></button>
   {% endif %}
 
   {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="sr-only">Next</span><span aria-hidden="true">&raquo;</span></a>
+  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span class="show-for-sr">Next</span><span aria-hidden="true">&raquo;</span></a>
   {% else %}
-  <button class="disabled"><span class="sr-only">Next</span><span aria-hidden="true">&raquo;</span></button>
+  <button class="disabled"><span class="show-for-sr">Next</span><span aria-hidden="true">&raquo;</span></button>
   {% endif %}
 </nav>
 {% endif %}

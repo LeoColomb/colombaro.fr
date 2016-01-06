@@ -4,40 +4,21 @@
 //
 
 .blog {
-  #content {
-    @extend .row;
 
-    header {
-      @extend .col;
-      @extend .s12;
-      @extend .m4;
-      @extend .l3;
-      min-height: 100vh;
-      padding: 0;
+  header {
+    @include grid-column(3);
 
-      nav {
-        @extend .col;
-        @extend .s12;
-        @extend .m4;
-        @extend .l3;
-        position: fixed;
-        height: 100vh;
-      }
+    nav {
+
     }
+
   }
 
   main {
-    @extend .col;
-    @extend .s12;
-    @extend .m8;
-    @extend .l9;
-    margin-top: $marge-top;
+    @include grid-column(3);
   }
 
   footer {
-    @extend .col;
-    @extend .s12;
-    @extend .m4;
-    @extend .l3;
+
   }
 }

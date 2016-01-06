@@ -8,16 +8,16 @@
     height: 100vh;
 
     .head-wrapper {
-      @extend .valign-wrapper;
+      //@extend .valign-wrapper;
       height: 100vh;
     }
 
     .head-logo {
-      @extend h1;
+      //@extend h1;
       width: 30%;
       margin: auto;
       text-align: center;
-      @extend .valign;
+      //@extend .valign;
     }
   }
 
@@ -28,11 +28,11 @@
     z-index: 400;
 
     h2 {
-      @include transition(color .3s ease-in-out);
+      //@include transition(color .3s ease-in-out);
     }
 
     .ico-go {
-      @include transition(transform .3s ease-in-out);
+      //@include transition(transform .3s ease-in-out);
     }
 
     &:hover, &:active, &:focus {
@@ -41,7 +41,7 @@
       //@extend .waves-effect;
 
       .ico-go {
-        @include transform(translate(20px));
+        //@include transform(translate(20px));
       }
     }
 

@@ -3,7 +3,13 @@
 // VARIABLES
 //
 
-// Colors
+// TYPOGRAPHY
+$font-path: "../fonts";
+$font-face-code: "FiraCode";
+//$font-faces: $font-face-body $font-face-code;
+
+// UTILS
+$smooth: 250ms linear both;
 $amount: 40%;
 $languages:
   ("unknow" "grey" "darken-4")
@@ -13,19 +19,3 @@ $languages:
   ("php" "deep-purple" "darken-3")
   ("python" "light-blue" "darken-4")
   ("shell" "blue-grey" "darken-3");
-
-// Fonts
-$font-path: "../fonts";
-//$font-face-body: "Roboto";
-$font-face-code: "FiraCode";
-//$font-faces: $font-face-body $font-face-code;
-
-// Animation
-$smooth: 250ms linear both;
-
-// Heading
-$header-height: 100px;
-$header-width: 25%;
-$navbar-height: $header-height;
-$navbar-height-mobile: $header-height;
-$marge-top: 20px;

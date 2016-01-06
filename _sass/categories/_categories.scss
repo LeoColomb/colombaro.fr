@@ -6,11 +6,11 @@
 @each $type, $color, $anim in $categories {
   .#{$type} {
     .smooth header nav {
-      @include animation($anim $smooth);
+      //@include animation($anim $smooth);
     }
 
     .smooth.to#{$type} &.main-container, .smooth.from#{$type} &.main-container {
-      @include animation(exit $smooth);
+      //@include animation(exit $smooth);
     }
 
     header nav, &.main-container {

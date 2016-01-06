@@ -1,6 +1,6 @@
 {
   "name": "leocolomb.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "http://colombaro.fr",
   "private": true,
   "authors": [
@@ -8,8 +8,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "materialize": "*",
+    "foundation-sites": "~6.0",
+    "normalize-opentype.css": "*",
     "smoothstate": "*",
-    "normalize-opentype.css": "*"
+    "lunr.js": "*"
   }
 }
