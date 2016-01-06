@@ -6,43 +6,18 @@
 .home {
   header nav {
     height: 100vh;
-
-    .head-wrapper {
-      //@extend .valign-wrapper;
-      height: 100vh;
-    }
-
-    .head-logo {
-      //@extend h1;
-      width: 30%;
-      margin: auto;
-      text-align: center;
-      //@extend .valign;
-    }
   }
 
-  .main-container {
-    display: block;
-    position: relative;
-    padding: 10vh;
-    z-index: 400;
-
-    h2 {
-      //@include transition(color .3s ease-in-out);
-    }
-
-    .ico-go {
-      //@include transition(transform .3s ease-in-out);
+  .category {
+    display: flex;
+    
+    div {
+      @include flex-grid-row();
     }
 
     &:hover, &:active, &:focus {
       z-index: 500;
       will-change: transform, height, box-shadow;
-      //@extend .waves-effect;
-
-      .ico-go {
-        //@include transform(translate(20px));
-      }
     }
 
     &.smooth-exit {

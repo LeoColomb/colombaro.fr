@@ -6,7 +6,8 @@
 .blog {
 
   header {
-    @include grid-column(3);
+    @include flex-grid-column(3);
+    min-height: 100vh;
 
     nav {
 
@@ -15,7 +16,7 @@
   }
 
   main {
-    @include grid-column(3);
+    @include flex-grid-column(4);
   }
 
   footer {

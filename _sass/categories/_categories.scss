@@ -3,18 +3,29 @@
 // CATEGORIES COLORS
 //
 
+// @function cat-color($category) {
+//   @if map-has-key($categories, $category) {
+//     @return map-get($categories, $category);
+//   }
+//   @warn "Unknown `#{name}` in $colors.";
+//   @return null;
+// }
+
+footer, header, .sub-header {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 @each $type, $color, $anim in $categories {
   .#{$type} {
-    .smooth header nav {
-      //@include animation($anim $smooth);
-    }
-
-    .smooth.to#{$type} &.main-container, .smooth.from#{$type} &.main-container {
-      //@include animation(exit $smooth);
-    }
-
-    header {
+    header, header ul {
       background: $color;
+    }
+
+    .sub-header {
+      @include callout($color);
+      border: none;
+      text-align: center;
     }
 
     &.category {
@@ -41,9 +52,9 @@
           color: darken($color, ($amount / 3));
         }
 
-        &:visited {
-          color: darken($color, ($amount / 1));
-        }
+        //&:visited {
+          //color: darken($color, ($amount / 1));
+        //}
       }
 
       blockquote {

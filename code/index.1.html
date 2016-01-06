@@ -1,13 +1,10 @@
 ---
 title: Code
 layout: page
+description: All my GitHub repositories
 ---
 {% assign repos = site.github.public_repositories | sort: 'pushed_at' %}
-<div class="sub-header">
-  <p>
-    <a href="https://github.com/LeoColomb?tab=repositories">{{ repos | size }} repositories</a>
-  </p>
-</div>
+<!--<a href="https://github.com/LeoColomb?tab=repositories">{{ repos | size }} repositories</a>-->
 {% for repo in repos reversed %}
 <div class="repo">
   {% if repo.language %}
@@ -17,11 +14,13 @@ layout: page
   {% endif %}
     <h5>{{ repo.name }}</h5>
     <p>{{ repo.description }}</p>
-    <a href="{{ repo.html_url }}">GitHub</a>
-    {% if repo.homepage == "" %}{% elsif repo.homepage %}
-    <a href="{{ repo.homepage }}">Website</a>
-    {% endif %}
     <small>{{ repo.language }}</small>
+    <div class="links">
+      <a href="{{ repo.html_url }}">Sources</a>
+      {% if repo.homepage == "" %}{% elsif repo.homepage %}
+      <a href="{{ repo.homepage }}">Website</a>
+      {% endif %}
+    </div>
   </div>
 </div>
 {% endfor %}

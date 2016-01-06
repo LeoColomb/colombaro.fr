@@ -4,22 +4,28 @@
 //
 
 .code {
-  nav, .footer-copyright {
-    @include flex-grid-row();
-    justify-content: center;
+  header {
+    //$topbar-background:
+    @include top-bar-container;
   }
 
-  main {
+  .footer-copyright {
+    text-align: center;
+  }
+
+  nav, main {
     @include flex-grid-row();
   }
-}
-
-.sub-header {
-  @include flex-grid-column(12);
-  background: #aaa;
-  justify-content: center;
 }
 
 .repo {
   @include flex-grid-column(3);
+
+  .links {
+    @include button-group("a");
+  }
+
+  a {
+    @include button();
+  }
 }

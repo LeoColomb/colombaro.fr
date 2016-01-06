@@ -1,15 +1,9 @@
 <header role="banner">
   <nav role="navigation">
-      <a href="{{ site.url }}" role="button">
-        <h1>{{ site.name }}</h1>
-      </a>
-      <!--<ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="{{ site.url }}">Back</a></li>
-      </ul>-->
-      <ul class="show-for-sr">
+      <ul class="breadcrumbs">
         <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-          <a href="{{ site.url }}" itemprop="url">
-            <span itemprop="title">{{ site.name }}</span>
+          <a href="{{ site.url }}" itemprop="url" role="button">
+            <h1 itemprop="title">{{ site.name }}</h1>
           </a>
         </li>
         {% if page.category %}
@@ -29,3 +23,9 @@
       </ul>
   </nav>
 </header>
+{% if page.description %}
+<div class="sub-header large">
+  <h2>{{ page.title }}</h2>
+  <h3 class="subheader">{{ page.description }}</h3>
+</div>
+{% endif %}

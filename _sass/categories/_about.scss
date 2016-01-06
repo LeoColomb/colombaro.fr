@@ -4,15 +4,11 @@
 //
 
 .about {
-  header nav {
+  header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin: 10vh auto -80px;
-
-    .head-logo {
-      display: none;
-    }
   }
 
   main {
