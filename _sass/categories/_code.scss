@@ -4,16 +4,11 @@
 //
 
 .code {
-
-  header {
-
-    nav {
-    }
+  nav, main, .footer-copyright {
+    @include grid-row;
   }
+}
 
-  main {
-  }
-
-  footer {
-  }
+.repo {
+  @include grid-column(3);
 }

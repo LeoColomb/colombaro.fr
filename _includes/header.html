@@ -1,33 +1,31 @@
 <header role="banner">
   <nav role="navigation">
-    <div class="head-container">
-      <div class="head-wrapper">
-        <a href="{{ site.url }}" role="button" class="head-logo">{{ site.name }}</a>
-        <!--<ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="{{ site.url }}">Back</a></li>
-        </ul>-->
-        <ul class="show-for-sr">
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <a href="{{ site.url }}" itemprop="url">
-              <span itemprop="title">{{ site.name }}</span>
-            </a>
-          </li>
-          {% if page.category %}
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <a href="{{ site.url }}/{{ page.category }}/" itemprop="url">
-              <span itemprop="title">{{ page.category | capitalize }}</span>
-            </a>
-          </li>
-          {% endif %}
-          {% if page.title | slugify != page.category %}
-          <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <a href="{{ site.url }}{{ page.url }}" itemprop="url">
-              <span itemprop="title">{{ page.title }}</span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
+      <a href="{{ site.url }}" role="button">
+        <h1>{{ site.name }}</h1>
+      </a>
+      <!--<ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="{{ site.url }}">Back</a></li>
+      </ul>-->
+      <ul class="show-for-sr">
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a href="{{ site.url }}" itemprop="url">
+            <span itemprop="title">{{ site.name }}</span>
+          </a>
+        </li>
+        {% if page.category %}
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a href="{{ site.url }}/{{ page.category }}/" itemprop="url">
+            <span itemprop="title">{{ page.category | capitalize }}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% if page.title | slugify != page.category %}
+        <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a href="{{ site.url }}{{ page.url }}" itemprop="url">
+            <span itemprop="title">{{ page.title }}</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
   </nav>
 </header>
