@@ -3,24 +3,21 @@
 // LANGUAGES COLORS
 //
 
-@each $type, $colorName, $colorBase in $languages {
-  $color: color($colorName, $colorBase);
+@each $type, $color in $languages {
+  .repo .#{$type} {
+    @include callout($color);
 
-  .#{$type}.card {
-    background: $color;
+    a {
+      color: lighten($color, ($amount / 2));
 
-    .card-action {
-      a {
-        color: lighten($color, $amount);
-
-        &:hover, &:focus, &:active {
-          color: lighten($color, ($amount / 2));
-        }
+      &:hover, &:focus, &:active {
+        color: $color;
       }
+    }
 
-      span {
-        color: lighten($color, ($amount / 4));
-      }
+    small {
+      color: darken($color, $amount);
+      float: right;
     }
   }
 }

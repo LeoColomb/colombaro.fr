@@ -4,11 +4,22 @@
 //
 
 .code {
-  nav, main, .footer-copyright {
-    @include grid-row;
+  nav, .footer-copyright {
+    @include flex-grid-row();
+    justify-content: center;
+  }
+
+  main {
+    @include flex-grid-row();
   }
 }
 
+.sub-header {
+  @include flex-grid-column(12);
+  background: #aaa;
+  justify-content: center;
+}
+
 .repo {
-  @include grid-column(3);
+  @include flex-grid-column(3);
 }

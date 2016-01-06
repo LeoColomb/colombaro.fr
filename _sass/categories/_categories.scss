@@ -13,11 +13,13 @@
       //@include animation(exit $smooth);
     }
 
-    header nav, &.main-container {
+    header {
       background: $color;
     }
 
-    &.main-container {
+    &.category {
+      background: $color;
+
       h2, strong {
         color: darken($color, ($amount / 3));
       }
@@ -27,10 +29,6 @@
           color: darken($color, $amount);
         }
       }
-    }
-
-    .btn-floating {
-      background: darken($color, ($amount / 4));
     }
 
     main, {
@@ -54,9 +52,7 @@
     }
 
     footer {
-      &, &.page-footer {
-        background: darken($color, ($amount / 5));
-      }
+      background: darken($color, ($amount / 5));
 
       a {
         color: lighten($color, ($amount / 1));
