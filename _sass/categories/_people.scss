@@ -1,0 +1,120 @@
+
+//
+// PEOPLE PAGE
+//
+
+.people {
+  header {
+    margin-bottom: 0;
+  }
+
+  main {
+    @include flex-grid-row(null, 100%);
+    min-height: 40vh;
+  }
+}
+
+.person {
+  @include callout($white);
+  color: $black;
+  text-align: center;
+  padding: {
+    bottom: 4em;
+    left: 1em;
+    right: 1em;
+  }
+  margin: {
+    top: 3em;
+    bottom: 10em;
+    left: auto;
+    right: auto;
+  }
+  max-width: 800px;
+
+  @include breakpoint(medium) {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  &-element {
+    background: map-get($categories-palette, "people");
+    @include flex-grid-column(100%);
+  }
+
+  .circle {
+    border-radius: 50%;
+    margin-top: -100px;
+  }
+}
+
+.networks {
+  width: 100%;
+  @include flex-grid-row(null, 100%);
+
+  .network {
+    @include flex-grid-column();
+    text-align: center;
+
+    .icons {
+      background: $black;
+      border-radius: 50%;
+      padding: 15px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.headline {
+  @include flex-grid-column(100%);
+  text-align: center;
+  padding: 5em;
+}
+
+.project {
+  @include flex-grid-row(null, 100%);
+  @include breakpoint(large) {
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &-content {
+    @include flex-grid-column(100%);
+    @include flex;
+    @include flex-align(center, middle);
+    @include breakpoint(large) {
+      @include flex-grid-column(50%);
+    }
+
+    padding-top: 5em;
+    padding-bottom: 5em;
+    border-top: 1px solid $light-gray;
+  }
+
+  &-article {
+    width: 50%;
+    @include breakpoint(large) {
+      width: 60%;
+    }
+    margin: 0 auto;
+  }
+
+  &-image {
+    background: $light-gray;
+    text-align: center;
+
+    img {
+      width: 80%;
+      @include breakpoint(medium) {
+        width: 60%;
+      }
+      @include breakpoint(large) {
+        width: 50%;
+      }
+      background: $white;
+      border: 1px solid $medium-gray;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.015), 0 0 25px rgba(0,0,0,0.075);
+    }
+  }
+}

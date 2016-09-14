@@ -70,7 +70,7 @@ defaults:
       path: ""
       type: people
     values:
-      category: about
+      category: people
       layout: person
       title: À propos
       sitemap: false
