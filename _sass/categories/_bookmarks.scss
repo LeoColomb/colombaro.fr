@@ -4,12 +4,28 @@
 //
 
 .bookmarks {
-  header nav {
+  blockquote {
+    padding: $blockquote-padding;
   }
+}
 
-  main {
+.bookmark {
+  @include flex-grid-column(80%);
+  @include breakpoint(medium) {
+    @include flex-grid-column(60%);
   }
+  margin-top: 2em;
+  margin-bottom: 2em;
 
-  footer {
+  img {
+    max-height: 80px;
   }
+}
+
+.font-name {
+  margin-top: 2.2em;
+  margin-bottom: 0;
+  color: $cite-color;
+  font-size: $breadcrumbs-item-font-size;
+  text-transform: uppercase;
 }

@@ -1,35 +1,42 @@
 ---
 title: Open Source
-layout: default
-style: code.min
+layout: page
+icons:
+  - mark-github
+  - globe
+  - repo-forked
+  - repo
 ---
 {% assign repos = site.github.public_repositories | sort: 'pushed_at' %}
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6 col-md-4 col-sm-6 site-header" role="heading">
-      <div class="box">
-        <h1>Léo Colombaro</h1>
-        <p class="stats">
-          <a href="https://github.com/LeoColomb?tab=repositories">{{ repos | size }} repositories</a>
-        </p>
-        <iframe src="http://ghbtns.com/github-btn.html?user=LeoColomb&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="143" height="20"></iframe>
-        <br />
-        <iframe src="//platform.twitter.com/widgets/follow_button.html?screen_name=LeoColomb&show_count=false" allowtransparency="true" frameborder="0" scrolling="no" style="width: 138px; height: 20px;"></iframe>
-      </div>
+<div class="small-12 columns">
+  <p class="text-center">
+    L'ensemble des <a href="https://github.com/LeoColomb">{{ repos | size }} dépots</a>
+    est visible sur GitHub.
+  </p>
+</div>
+{% for repo in repos reversed %}
+<div class="repo">
+  {% if repo.language %}
+  <div class="{{ repo.language | slugify }}">
+  {% else %}
+  <div class="unknow">
+  {% endif %}
+    <div class="repo-type">
+      {% if repo.fork %}
+      {% include icon.html icon="repo-forked" %}
+      {% else %}
+      {% include icon.html icon="repo" %}
+      {% endif %}
     </div>
-    <div class="site-content" id="repos">
-      {% for repo in repos reversed %}
-      <div class="col-lg-3 col-md-4 col-sm-6 repo {{ repo.language | slugify }}">
-        <a class="box" href="{% if repo.homepage %}{% if repo.homepage == "" %}{{ repo.html_url }}{% else %}{{ repo.homepage }}{% endif %}{% else %}{{ repo.html_url }}{% endif %}">
-          <h2 class="repo__name">{{ repo.name }}</h2>
-          <p class="repo__info">{{ repo.stargazers_count }} stargazers · {{ repo.language }}</p>
-          <p class="repo__desc">{{ repo.description }}</p>
-        </a>
-      </div>
-      {% endfor %}
+    <h4>{{ repo.name }}</h4>
+    <p>{{ repo.description | truncatewords: 9 }}</p>
+    <small>{{ repo.language }}</small>
+    <div class="repo-links">
+      <a href="{{ repo.html_url }}">{% include icon.html icon="mark-github" %}</a>
+      {% if repo.homepage == "" %}{% elsif repo.homepage %}
+      <a href="{{ repo.homepage }}">{% include icon.html icon="globe" %}</a>
+      {% endif %}
     </div>
   </div>
 </div>
-<footer role="contentinfo">
-  <p class="text-muted text-center"><small>© {{ site.time | date: "%Y" }} {{ site.author.name" }} — <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons License BY-NC-ND 4.0</a></small></p>
-</footer>
+{% endfor %}

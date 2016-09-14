@@ -1,0 +1,37 @@
+- type: quote
+  author: Maitre Eolas
+  date: 2015
+  link: https://twitter.com/Maitre_Eolas/status/680000057446428672
+  text: "— Contre le terrorisme, passons des chatons au mixer.<br>— Ça ne sert à rien.<br>— Vous préférez peut-être rester sans rien faire ?"
+
+- type: font
+  name: Infini
+  link: http://www.cnap.graphismeenfrance.fr/infini/
+  text: "Crée sur une commande du CNAP, un travail sur les ligatures original."
+
+- type: quote
+  author: Paul Mathias
+  date: 2015
+  link: https://www.youtube.com/watch?v=n2UNJesD2zQ&t=2m58s
+  text: "Le code n'est pas un simple langage technique, le code est une manière d'exprimer des choix de société."
+
+- type: font
+  name: CSS Sans
+  link: https://yusugomori.com/projects/css-sans/
+  text: "Uniquement affichée à l'aide de CSS, étude pertinante des variations entre navigateurs."
+
+- type: font
+  name: Small Stroke
+  link: http://www.ponoko.com/design-your-own/products/tiny-stroke-only-alphabet-5557
+  text: "Concue pour une gravure laser très fine."
+
+- type: quote
+  author: Daniel Kaplan
+  date: 2012
+  ref:
+  text: "Il ne faut pas se contenter d'insister auprès des jeunes générations sur les risquent qu'il courent, mais les inciter à l'appropriation, leur apprendre à savoir gérer leur vie en ligne."
+
+- type: font
+  name: Source Code Pro
+  link: http://adobe-fonts.github.io/source-code-pro/
+  text: Une référence monospace pour la visualisation de code dans le milieu du développement.

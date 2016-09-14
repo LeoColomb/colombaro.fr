@@ -1,0 +1,15 @@
+
+//
+// HEADER COMPONENT
+//
+
+header {
+  @include flex;
+  @include flex-align(center, middle);
+  height: 20vh;
+  margin-bottom: $global-margin;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}

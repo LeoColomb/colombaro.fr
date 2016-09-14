@@ -1,48 +1,43 @@
 ---
-layout: default
-style: style.min
+layout: page
+category: home
 ---
-<div class="row">
-  <header class="col-sm-4" role="banner">
-    <h1>{{ site.name }}</h1>
-    <p class="lead">Quoi de plus évolutif que l'intelligence informatique ?</p>
-    <p>Ma passion, je la cultive ! Étant touche à tout, je fais des tentatives d’ébauches dans un grand nombre de domaines liés au numérique.</p>
-  </header>
-  <div class="col-sm-2 box-1">
-    <h4>Open Source Project</h4>
-    <p>Développeur par passion, je revendique aussi la libéralisation des codes source. Ainsi, une grande partie de mes projets sont ouverts à toutes modifications et améliorations collectives.</p>
-    <a href="{{ site.url }}/code/" role="button">
-      <p class="butn-next">Contribuer »</p>
-    </a>
+<a href="{{ site.url }}/bookmarks/" class="category bookmarks">
+  <div>
+    <h2>Bookmarks</h2>
+    <p>La typographie est une notion importante dans la lecture web.
+      C’est pourquoi j’entretiens une petite galerie typographique de polices
+      intrigantes et originales.</p>
   </div>
-  <div class="col-sm-2 box-2">
-    <h4>MyFonts</h4>
-    <p>La typographie est une notion importante dans la lecture web. C’est pourquoi j’entretiens une petite galerie typographique de polices intrigantes et essentielles.</p>
-    <a href="{{ site.url }}" role="button">
-      <p class="butn-next">En maintenance</p>
-    </a>
+</a>
+<a href="{{ site.url }}/code/" class="category code">
+  <div>
+    <h2>Open Source</h2>
+    <p>Développeur par passion, je revendique aussi l'ouverture des codes
+      source. Ainsi, une grande partie de mes projets sont libre de
+      modifications, d'améliorations et de partage.</p>
   </div>
-  <div class="col-sm-2 box-3">
-    <h4>Réseaux</h4>
-    <p>
-      Retrouvez-moi sur différents réseaux sociaux grâce à cette carte de visite numérique. Souvent caché sous le pseudo
-      <abbr title="Léo Colombaro">LeoColomb</abbr>, je ne suis pourtant jamais très loin !
-    </p>
-    <a href="http://about.me/LeoColomb" role="button">
-      <p class="butn-next">Échanger »</p>
-    </a>
+</a>
+<a href="{{ site.url }}/leo/" class="category about">
+  <div>
+    <h2>À propos</h2>
+    <p>Retrouvez-moi sur différents réseaux sociaux grâce à cette carte de
+      visite numérique. Souvent caché sous le pseudo
+      <b>LeoColomb</b>, je ne suis pourtant jamais
+      très loin !</p>
   </div>
-  <div class="col-sm-2 box-4">
-    <h4>Graphisme &amp; interactivité</h4>
-    <p>
-      Créé par Geoffrey Dorne, ce blog présente des projets innovants et incontournables autour du graphisme, du design, des technologies de la création. La refonte 2016 a été retravaillée ensemble.<br />
-      <small>— Projet d’ingénieur</small>
-    </p>
-    <a href="https://graphism.fr/" role="button">
-      <p class="butn-next">Découvrir »</p>
-    </a>
+</a>
+<a href="#" class="category blog">
+  <div>
+    <h2>Blog</h2>
+    <p><b>Work in progress!</b><br />Idées et reflexions autours du numérique.</p>
   </div>
-</div>
-<footer role="contentinfo">
-  <p class="text-muted text-center"><small>© {{ site.time | date: "%Y" }} {{ site.author.name" }} — <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons License BY-NC-ND 4.0</a></small></p>
-</footer>
+</a>
+<a href="https://graphism.fr" class="category road">
+  <div>
+    <h2>Graphism.fr</h2>
+    <p>Créé par Geoffrey Dorne, ce blog présente des projets innovants et
+      incontournables autour du graphisme, du design et des technologies.
+      La refonte 2016 a été retravaillée ensemble.</p>
+  </div>
+</a>

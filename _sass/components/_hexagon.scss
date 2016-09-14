@@ -1,0 +1,33 @@
+
+//
+// HEXAGON COMPONENT
+//
+
+.hexagon {
+  position: fixed;
+  z-index: 999;
+  border: 1em solid $body-background;
+  border-radius: 50%;
+  transition: all $categories-transition;
+
+  @each $bkp in $breakpoint-classes {
+    $size: 3 * strip-unit(map-get($breakpoints, $bkp) / 1200);
+    @if not has-value($size) {
+      $size : 1.5em;
+    }
+    @include breakpoint($bkp) {
+      top: calc(10vh - #{($size / 2) + 0.5em});
+      left: ($size + 0em);
+      width: ($size + 1em);
+      height: ($size + 1em);
+
+      &:hover, &:active, &:focus {
+        top: calc(10vh - #{($size / 2) + 0.6em});
+        left: ($size - 0.1em);
+        width: ($size + 1.2em);
+        height: ($size + 1.2em);
+        border-width: (1em - 0.2em);
+      }
+    }
+  }
+}

@@ -3,77 +3,42 @@
 // CATEGORIES COLORS
 //
 
-// @function cat-color($category) {
-//   @if map-has-key($categories, $category) {
-//     @return map-get($categories, $category);
-//   }
-//   @warn "Unknown `#{name}` in $colors.";
-//   @return null;
-// }
-
-footer, header, .sub-header {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-@each $type, $color, $anim in $categories {
+@each $type, $color in $categories-palette {
   .#{$type} {
-    header, header ul {
+    .hexagon, header {
       background: $color;
     }
 
-    .sub-header {
-      @include callout($color);
-      border: none;
-      text-align: center;
+    h2 {
+      color: smart-scale($color, $amount);
+
+      small {
+        color: smart-scale($color, ($amount / 2));
+      }
+    }
+
+    h1, h3, a {
+      color: smart-scale($color, ($amount / 4));
+    }
+
+    blockquote {
+      border-color: smart-scale($color, ($amount / 4));
     }
 
     &.category {
       background: $color;
 
-      h2, strong {
-        color: darken($color, ($amount / 3));
+      p {
+        color: smart-scale($color, ($amount / 2));
+      }
+
+      h2 {
+        color: smart-scale($color, ($amount / 3));
       }
 
       &:hover, &:active, &:focus {
-        h2, strong {
-          color: darken($color, $amount);
-        }
-      }
-    }
-
-    main, {
-      h1, h2, a, strong {
-        color: darken($color, ($amount / 4));
-      }
-
-      a {
-        &:active, &:hover, &:focus {
-          color: darken($color, ($amount / 3));
-        }
-
-        //&:visited {
-          //color: darken($color, ($amount / 1));
-        //}
-      }
-
-      blockquote {
-        border-left-color: darken($color, ($amount / 4));
-      }
-    }
-
-    footer {
-      background: darken($color, ($amount / 5));
-
-      a {
-        color: lighten($color, ($amount / 1));
-
-        &:active, &:hover, &:focus {
-          color: lighten($color, ($amount / 3));
-        }
-
-        &:visited {
-          color: $color;
+        p, h2 {
+          color: smart-scale($color, $amount);
         }
       }
     }

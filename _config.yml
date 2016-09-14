@@ -5,26 +5,33 @@
 
 # Site info
 name: Créations Colombaro
-description: Léo Colombaro &middot; colombaro.fr
+description: colombaro.fr
 version: 1.0.0
-author:
-  name: Léo Colombaro
-  uri: http://colombaro.fr/leo
+repository: LeoColomb/leocolomb.github.io
 color: "#0d0045"
+# theme: leocolomb-sites
 
-# Front Tools
-disqus:
-google_analytics: UA-27779657-1
+# Author
+author: LeoColomb
+twitter:
+  username: LeoColomb
+fullname: Léo Colombaro
 
 # Used for Sitemap.xml and your RSS feed
 url: http://colombaro.fr
 baseurl: ""
-assetsurl: "/assets"
+assetsurl: /assets
+
+# Used for SEO
+logo: /assets/icon/favicon.png
+
+# Front Tools
+google_analytics: UA-27779657-1
 
 # Engines
 permalink: /blog/:title/
 paginate: 10
-paginate_path: "blog/page/:num"
+paginate_path: blog/page/:num
 sass:
   style: :compressed
 
@@ -33,7 +40,7 @@ collections:
   trips:
     output: true
     permalink: /road/:name/
-  about:
+  people:
     output: true
     permalink: /:name/
 
@@ -42,55 +49,68 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      category: "blog"
-      layout: "post"
+      category: blog
+      layout: post
       sitemap: false
       color: "#542437"
-      anim: "wipeH"
+      animation: wipeH
   -
     scope:
-      path: "road"
+      path: road
     values:
-      category: "road"
-      layout: "trip"
+      category: road
+      layout: trip
       sitemap: false
       color: "#53777a"
-      anim: "wipeV"
+      animation: wipeV
   -
     scope:
       path: ""
-      type: "about"
+      type: people
     values:
-      category: "about"
-      layout: "person"
-      title: "About"
+      category: about
+      layout: person
+      title: À propos
       sitemap: false
       color: "#c02942"
-      anim: "cerclize"
+      animation: cerclize
+      icons:
+        - social-dribbble
+        - social-facebook
+        - social-googleplus
+        - social-instagram
+        - social-linkedin
+        - social-reddit
+        - social-skype
+        - social-snapchat
+        - social-twitter
+        - social-vimeo
   -
     scope:
-      path: "code"
+      path: code
     values:
-      category: "code"
+      category: code
       color: "#d95b43"
-      anim: "cerclize"
+      animation: cerclize
   -
     scope:
-      path: "bookmarks"
+      path: bookmarks
     values:
-      category: "bookmarks"
+      category: bookmarks
       color: "#ecd078"
-      anim: "cerclize"
+      animation: cerclize
 
 # Plugins
 gems:
   - jemoji
   - jekyll-mentions
   - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-github-metadata
 
 # Excluded files
 exclude:
@@ -98,4 +118,3 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-  - bower.json

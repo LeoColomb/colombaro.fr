@@ -7,7 +7,7 @@ category: blog
 {% for post in paginator.posts %}
 <div>
   <a href="{{ site.url }}{{ post.url }}">
-    <h2>{{ post.title }}</h2>
+    <h3>{{ post.title }}</h3>
   </a>
   <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
   {{ post.excerpt }}

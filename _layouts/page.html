@@ -1,21 +1,18 @@
 ---
 layout: default
 ---
-<div id="content" class="smooth">
+<!--<div id="content" class="smooth">-->
   {% include header.html %}
   <main role="main">
     {{ content }}
   </main>
   {% include footer.html %}
-</div>
+<!--</div>-->
 {% if page.style %}
 <style>
   /**{{ page.style | scssify }}**/
 </style>
 {% endif %}
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="{{ site.assetsurl }}/js/jquery.smoothState.min.js"></script>
-<!--<script src="{{ site.assetsurl }}/js/script.js"></script>-->
 {% for script in page.scripts %}
 <script src="{{ script }}"></script>
 {% endfor %}

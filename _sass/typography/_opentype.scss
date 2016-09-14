@@ -2,7 +2,7 @@
 // normalize-opentype.css
 // v0.2.4
 // MIT License
-// kennethormandy.com/journal/normalize-opentype-css
+// https://github.com/kennethormandy/normalize-opentype.css
 //
 
 //
@@ -20,6 +20,10 @@
   text-shadow: inherit;
   background-color: #ACCEF7;
 }
+
+// * {
+//   user-select: none;
+// }
 
 body, table {
   @include font-feature-settings("kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0);
@@ -39,11 +43,13 @@ h1, h2, h3, h4 {
 
 // Change all letters to uppercase
 // Turn on small caps for upper and lowercase letters
-abbr, acronym {
+abbr {
+}
+
+acronym {
   text-transform: uppercase;
   @include font-feature-settings("kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1);
 }
-
 
 // TODO: Turn on diagonal fractions where appropriate
 time {

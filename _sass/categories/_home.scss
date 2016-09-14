@@ -4,28 +4,36 @@
 //
 
 .home {
-  header nav {
-    height: 100vh;
+  * {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  header {
+    height: 60vh;
+    margin-bottom: 0;
+  }
+
+  main {
+    @include flex-grid-row(null, 100%);
+    min-height: 40vh;
   }
 
   .category {
-    display: flex;
-    
-    div {
-      @include flex-grid-row();
+    @include flex-grid-column(100%);
+
+    @include breakpoint(medium) {
+      @include flex-grid-column();
     }
 
-    &:hover, &:active, &:focus {
-      z-index: 500;
-      will-change: transform, height, box-shadow;
-    }
+    padding: rem-calc(50) !important;
 
-    &.smooth-exit {
-      z-index: 600;
+    p, h2, strong {
+      transition: color $categories-transition;
     }
   }
 
   footer {
-    text-align: center;
+    display: none;
   }
 }

@@ -3,16 +3,19 @@ title: Bookmarks
 layout: page
 ---
 
-{% for pin in site.data.pins %}
-{% if pin.type == "quote" %}
-<blockquote>
-  <p>{{ pin.text }}</p>
-  <small>{{ pin.author }}</small>
-</blockquote>
-{% else %}
-<div>
-  <p>{{ pin.name }}</p>
-  <img src="{{ site.assetsurl }}/img/{{ pin.name | slugify }}.png" alt="{{ pin.name }}" />
+{% for bookmark in site.data.bookmarks %}
+<div class="bookmark">
+  {% if bookmark.type == "quote" %}
+  <blockquote>
+    {{ bookmark.text }}
+    <cite>{{ bookmark.author }} (<a href="{{ bookmark.link }}">{{ bookmark.date }}</a>)</cite>
+  </blockquote>
+  {% else %}
+  <a href="{{ bookmark.link }}">
+    <img src="{{ site.assetsurl }}/img/fonts/{{ bookmark.name | slugify }}.svg" alt="{{ bookmark.name }}" />
+  </a>
+  <p class="font-name">{{ bookmark.name }}</p>
+  <p>{{ bookmark.text }}</p>
+  {% endif %}
 </div>
-{% endif %}
 {% endfor %}

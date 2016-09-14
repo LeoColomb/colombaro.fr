@@ -10,4 +10,4 @@ Language: French
 Standards: HTML5, CSS3, JavaScript
 Components: Ruby, Jekyll, smothState.js
 Doctype: HTML5
-Software: Microsoft Visual Studio, Atom, Photoshop
+Software: Microsoft Visual Studio, Atom, Adobe Photoshop
