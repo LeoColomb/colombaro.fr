@@ -87,7 +87,7 @@
 // CATEGORIES
 //
 $categories-palette: (
-  home: #111111,
+  home: {{ site.color }},
   {% for cat in site.defaults %}
   {{ cat.values.category }}: {{ cat.values.color }},
   {% endfor %});
