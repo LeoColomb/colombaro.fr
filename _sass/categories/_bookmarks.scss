@@ -14,8 +14,8 @@
   @include breakpoint(medium) {
     @include flex-grid-column(60%);
   }
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 
   img {
     max-height: 80px;

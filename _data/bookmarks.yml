@@ -1,3 +1,8 @@
+- type: font
+  name: OpenDyslexic
+  link: http://opendyslexic.org/
+  text: "Typographie open source vouée à minimiser les problèmes de dislexie à la lecture."
+
 - type: quote
   author: Maitre Eolas
   date: 2015
@@ -7,7 +12,7 @@
 - type: font
   name: Infini
   link: http://www.cnap.graphismeenfrance.fr/infini/
-  text: "Crée sur une commande du CNAP, un travail sur les ligatures original."
+  text: "Crée sur une commande du CNAP, comportant un remarquable travail sur les ligatures."
 
 - type: quote
   author: Paul Mathias
@@ -18,7 +23,7 @@
 - type: font
   name: CSS Sans
   link: https://yusugomori.com/projects/css-sans/
-  text: "Uniquement affichée à l'aide de CSS, étude pertinante des variations entre navigateurs."
+  text: "Uniquement affichée à l'aide de CSS, fournie avec une étude pertinante des variations entre navigateurs."
 
 - type: font
   name: Small Stroke
