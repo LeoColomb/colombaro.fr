@@ -1,8 +1,9 @@
 language: ruby
 rvm:
-  - 2.1
+  - 2.2
 
 before_install:
+  - gem install activesupport -v '~> 4.2'
   - gem install html-proofer
 
 script:
@@ -14,3 +15,6 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 sudo: false
+
+notifications:
+  email: false
