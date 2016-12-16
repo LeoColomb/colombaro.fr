@@ -1,4 +1,14 @@
 - type: font
+  name: Datalegreya
+  link: http://figs-lab.com/datalegreya
+  text: "Incroyable typographie qui fusionne texte et graphique."
+
+- type: font
+  name: Sélavy
+  link: http://ninastoessinger.com/projects/selavy/
+  text: "Typographie gratuite présentant le texte sous forme de point, adaptée à une impression minimale."
+
+- type: font
   name: OpenDyslexic
   link: http://opendyslexic.org/
   text: "Typographie open source vouée à minimiser les problèmes de dislexie à la lecture."
