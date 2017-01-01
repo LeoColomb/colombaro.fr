@@ -9,7 +9,7 @@
 Your last name is _Colombaro_? **So great!**  
 Get your own `name.colombaro.fr` page!
 
-1. Start by [editing my _person_ file `leo.html`](https://github.com/LeoColomb/leocolomb.github.io/edit/master/_about/leo.html) in [`_about`](_about) folder
+1. Start by [editing my _person_ file `leo.html`](https://github.com/LeoColomb/leocolomb.github.io/edit/master/_people/leo.html) in [`_people`](_people) folder
 2. Rename it with `[your ascii lowercase first name].html`
 3. Refresh content with your own personal/profesional data
 4. Click on "Propose pull request" button
