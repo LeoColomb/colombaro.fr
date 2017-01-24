@@ -77,14 +77,8 @@ defaults:
       color: "#c02942"
       animation: cerclize
       icons:
-        - social-dribbble
-        - social-facebook
-        - social-googleplus
-        - social-instagram
+        - social-github
         - social-linkedin
-        - social-reddit
-        - social-skype
-        - social-snapchat
         - social-twitter
         - social-vimeo
   -
