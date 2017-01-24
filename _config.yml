@@ -81,6 +81,7 @@ defaults:
         - social-linkedin
         - social-twitter
         - social-vimeo
+        - social-behance
   -
     scope:
       path: code
