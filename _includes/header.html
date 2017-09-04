@@ -2,7 +2,7 @@
   <ul class="menu">
     <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
       <a href="{{ site.url }}" itemprop="url" role="button">
-        <h1 itemprop="title">{{ site.name }}</h1>
+        <h1 itemprop="title">{{ site.title }}</h1>
       </a>
     </li>
     {% if page.category and page.category != "home" %}
@@ -24,9 +24,9 @@
 <header role="banner">
   {% if page.category == "home" %}
   <canvas id="world"></canvas>
-  <img src="{{ site.assetsurl }}/img/cc-logo-home.svg" alt="{{ site.name }}">
+  <img src="{{ site.assetsurl }}/img/cc-logo-home.svg" alt="{{ site.title }}">
   {% else %}
-  <a href="{{ site.url }}" class="hexagon" title="{{ site.name }}"></a>
+  <a href="{{ site.url }}" class="hexagon" title="{{ site.title }}"></a>
   <h2>{{ page.title }}{% if page.description %} <small>{{ page.description }}</small>{% endif %}</h2>
   {% endif %}
 </header>
