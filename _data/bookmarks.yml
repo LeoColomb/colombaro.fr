@@ -16,7 +16,7 @@
 
 - type: font
   name: OpenDyslexic
-  link: http://opendyslexic.org/
+  link: https://opendyslexic.org/
   text: "Typographie open source vouée à minimiser les problèmes de dislexie à la lecture."
 
 - type: quote
@@ -43,7 +43,7 @@
 
 - type: font
   name: Small Stroke
-  link: http://www.ponoko.com/design-your-own/products/tiny-stroke-only-alphabet-5557
+  link: https://www.ponoko.com/design-your-own/products/tiny-stroke-only-alphabet-5557
   text: "Concue pour une gravure laser très fine."
 
 - type: quote
@@ -54,5 +54,5 @@
 
 - type: font
   name: Source Code Pro
-  link: http://adobe-fonts.github.io/source-code-pro/
+  link: https://adobe-fonts.github.io/source-code-pro/
   text: Une référence monospace pour la visualisation de code dans le milieu du développement.

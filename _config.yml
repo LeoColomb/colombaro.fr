@@ -1,6 +1,6 @@
 #
 # Site configuration flags
-# Jekyll (http://jekyllrb.com/)
+# Jekyll (https://jekyllrb.com/)
 #
 
 # Site info
@@ -18,7 +18,7 @@ twitter:
 fullname: Léo Colombaro
 
 # Used for Sitemap.xml and your RSS feed
-url: http://colombaro.fr
+url: https://colombaro.fr
 baseurl: ""
 assetsurl: /assets
 

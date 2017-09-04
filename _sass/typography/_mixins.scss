@@ -3,7 +3,7 @@
 //
 
 // Hyphenation
-// http://caniuse.com/#feat=css-hyphens
+// https://caniuse.com/#feat=css-hyphens
 @mixin hyphens($value) {
   -webkit-hyphens: $value;
   -moz-hyphens: $value;
@@ -11,7 +11,7 @@
 }
 
 // OpenType Features
-// http://caniuse.com/#feat=font-feature
+// https://caniuse.com/#feat=font-feature
 @mixin font-feature-settings($values...) {
   -webkit-font-feature-settings: $values;
   -moz-font-feature-settings: $values;

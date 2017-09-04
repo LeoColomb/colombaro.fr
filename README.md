@@ -1,6 +1,6 @@
-# [Léo Colombaro](http://colombaro.fr)
+# [Léo Colombaro](https://colombaro.fr)
 
-> The source code of [colombaro.fr](http://colombaro.fr).
+> The source code of [colombaro.fr](https://colombaro.fr).
 
 ## What is this?!
 
@@ -19,11 +19,11 @@ Get your own `name.colombaro.fr` page!
 
 This website is built on:
 * [GitHub Pages](https://pages.github.com/) (Engine)
-* [Jekyll](http://jekyllrb.com/) (Ruby)
+* [Jekyll](https://jekyllrb.com/) (Ruby)
 * [SmoothState](https://miguel-perez.github.io/smoothState.js/) (JavaScript)
 * [FiraCode](https://github.com/tonsky/FiraCode) (Font)
 
 ## License
 
 Code licensed under [MIT License](LICENSE)  
-Content licensed under [Creative Commons License BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+Content licensed under [Creative Commons License BY 4.0](https://creativecommons.org/licenses/by/4.0/)
