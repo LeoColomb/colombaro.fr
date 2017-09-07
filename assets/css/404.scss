@@ -12,7 +12,8 @@
 // PAGE 404
 //
 @charset "UTF-8";
-@import "vendor/normalize";
+@import "foundation/global";
+@include -zf-normalize;
 
 html {
   height: 100%;
