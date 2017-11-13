@@ -6,6 +6,7 @@
   <meta name="author" content="{{ site.author.name }}" />
   <meta name="keywords" lang="fr" content="leo colombaro, colombaro, leocolomb, leo, léo, developpeur, graphisme, leocolombaro, technologie, clmb, numerique, informatique, computer, digital, creation, creations, code, open-souce, php, art, html, css, html5 css3, graphiste, decouverte, recherche, developpement" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="manifest" href="{{ site.assetsurl }}/favicons/colombaro.webmanifest">
   <link rel="stylesheet" href="{{ site.assetsurl }}/styles/{% if page.style %}{{ page.style }}{% else %}main{% endif %}.css" />
 </head>
 <body{% if page.category %} class="{{ page.category }}"{% endif %}>
@@ -14,6 +15,7 @@
   <script src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js"  defer="defer" crossorigin="anonymous"></script>
   <script src="https://xtianmiller.github.io/emergence.js/dist/js/emergence.min.js"  defer="defer" crossorigin="anonymous"></script>
   <script src="{{ site.assetsurl }}/scripts/main.js" defer="defer"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js" crossorigin="anonymous"></script>
   {% include analytics.html %}
 </body>
 </html>
