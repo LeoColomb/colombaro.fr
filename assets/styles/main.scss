@@ -14,8 +14,9 @@
 @charset "UTF-8";
 
 //
-// FRAMEWORK
+// THEME
 //
+//@import "{{ site.theme }}";
 @import "primer-css/index";
 
 //

@@ -5,4 +5,5 @@ _site
 .bundle
 .sass-cache
 Gemfile.lock
+package-lock.json
 node_modules/simple-icons

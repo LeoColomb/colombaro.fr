@@ -7,9 +7,9 @@
 title: Créations Colombaro
 version: 3.0.0
 repository: LeoColomb/leocolomb.github.io
-color: "#111111"
+color: "#24292e"
 assetsurl: /assets
-# theme: leocolomb-sites
+# theme: jekyll-theme-primer
 
 # Author
 author: LeoColomb
@@ -18,15 +18,15 @@ twitter:
 fullname: Léo Colombaro
 
 # Used for SEO
-logo: /assets/icon/favicon.png
+logo: /assets/favicons/favicon.png
 
 # Front Tools
 google_analytics: UA-27779657-1
 
 # Engines
-permalink: /blog/:title/
+permalink: slug
 paginate: 10
-paginate_path: blog/page/:num
+paginate_path: page/:num
 sass:
   style: :compressed
   load_paths:
