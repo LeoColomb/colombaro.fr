@@ -1,11 +1,17 @@
-
 //
 // SYNTAX HIGHLIGHTING
 //
 
+code {
+  font-size: 14px;
+}
+
+figure {
+  margin: 0;
+  padding: $spacer-3;
+}
+
 .highlight {
-  padding: 5px 10px;
-  margin: 20px 0;
   // Comment
   .c, .c1 {
     color: #586E75;

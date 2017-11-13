@@ -1,29 +1,30 @@
-# [Léo Colombaro](https://colombaro.fr)
+# [![colombaro.fr](assets/images/logo.svg)](https://colombaro.fr)
 
-> The source code of [colombaro.fr](https://colombaro.fr).
+> The source code of [Léo Colombaro](https://colombaro.fr)' personal website.
 
-## What is this?!
+## Setup
 
-## You are a Colombaro?
+* Install dependencies
+  ```console
+  bundle install
+  ```
+  
+* Build with Jekyll
+  ```console
+  bundle exec jekyll serve
+  ```
 
-Your last name is _Colombaro_? **So great!**  
-Get your own `name.colombaro.fr` page!
-
-1. Start by [editing my _person_ file `leo.html`](https://github.com/LeoColomb/leocolomb.github.io/edit/master/_people/leo.html) in [`_people`](_people) folder
-2. Rename it with `[your ascii lowercase first name].html`
-3. Refresh content with your own personal/profesional data
-4. Click on "Propose pull request" button
-5. Welcome to family!
+See [GitHub Guides](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) for more details.
 
 ## Technologies
 
-This website is built on:
-* [GitHub Pages](https://pages.github.com/) (Engine)
-* [Jekyll](https://jekyllrb.com/) (Ruby)
-* [SmoothState](https://miguel-perez.github.io/smoothState.js/) (JavaScript)
-* [FiraCode](https://github.com/tonsky/FiraCode) (Font)
+Built on:
+* [GitHub Pages](https://pages.github.com/)
+* [Jekyll](https://jekyllrb.com/)
+* [Primer](http://primercss.io/)
+* [mo.js](http://mojs.io/)
 
 ## License
 
-Code licensed under [MIT License](LICENSE)  
+Code licensed under [MIT License](LICENSE) © [Léo Colombaro](https://colombaro.fr)  
 Content licensed under [Creative Commons License BY 4.0](https://creativecommons.org/licenses/by/4.0/)

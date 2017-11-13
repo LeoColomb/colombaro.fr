@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "primer-css": "^9.6.0",
+    "simple-icons": "^1.2.10"
+  },
+  "scripts": {
+    "postupdate": "cp -r node_modules/* _sass/"
+  }
+}

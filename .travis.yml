@@ -1,21 +1,29 @@
-language: ruby
-rvm:
-  - 2.2
+jobs:
+  include:
+    - language: ruby
+      rvm: 2.3.3
+      install:
+        - gem install bundle
+        - bundle install
+      script: bundle exec jekyll build
+    - language: node_js
+      node_js: node
 
-before_install:
-  - gem install activesupport -v '~> 4.2'
-  - gem install html-proofer
+    - stage: deploy
+      language: node_js
+      node_js: node
+      script: true
+      # deploy:
+      #   provider: pages
+      #   skip_cleanup: true
+      #   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+      #   on:
+      #     branch: master
 
-script:
-  - bundle exec jekyll build
-  - htmlproofer ./_site --disable-external
+  fast_finish: true
 
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-    - secure: MnLM113Du3zsRsCevLzi8aEAkqTWFs3YDDIZsDdSNJFv1X5wOGt7F4ewk4Gp5LIBvqhyCWWbs+8YxZRyBLcRsDzji3Kc1TY1x54pQZ6JZ+Q5UMBgIhR0/+AQIWxXe3x5CEhcT6buF62LFmoGdLAaMsVpN6I2k9yKm/7tdzPda74=
-
-sudo: false
+cache:
+  apt: true
 
 notifications:
   email: false

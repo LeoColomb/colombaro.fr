@@ -25,35 +25,12 @@
 //   user-select: none;
 // }
 
-body, table {
-  @include font-feature-settings("kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0);
-}
-
 // Headings
 // ========
 
 // Turn on discretionary ligatures for larger headings
 h1, h2, h3, h4 {
-  text-rendering: optimizeLegibility;
   @include font-feature-settings("kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1);
-}
-
-// Text-level semantics
-// ====================
-
-// Change all letters to uppercase
-// Turn on small caps for upper and lowercase letters
-abbr {
-}
-
-acronym {
-  text-transform: uppercase;
-  @include font-feature-settings("kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1);
-}
-
-// TODO: Turn on diagonal fractions where appropriate
-time {
-  @include font-feature-settings("kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0);
 }
 
 
@@ -61,7 +38,6 @@ time {
 // ! Ligatures are on since the code font support it
 // Correctly wrap code words
 pre, kbd, samp, code {
-  text-rendering: optimizeLegibility;
   @include font-feature-settings("kern" 0, "liga" 1, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1);
   @include white-space(pre-wrap);
   word-wrap: break-word;
@@ -153,49 +129,52 @@ tbody, caption {
 // According to Wikipedia: https://en.wikipedia.org/wiki/Non-English_usage_of_quotation_marks
 // This is built on prior knowledge, which I would like to find and cite
 
-// :lang(af),
-// :lang(zh),
-// :lang(en-us),
-// :lang(eo),
-// :lang(id),
-// :lang(ga),
-// :lang(ko),
-// :lang(pt-br),
-// :lang(th),
-// :lang(tr),
-:lang(en) {
-  quotes: '\201C' '\201D' '\2018' '\2019' '\201C' '\201D' '\2018' '\2019';
-  /*         “       ”       ‘       ’       “       ”       ‘       ’  */
+q,
+blockquote {
+  // :lang(af),
+  // :lang(zh),
+  // :lang(en-us),
+  // :lang(eo),
+  // :lang(id),
+  // :lang(ga),
+  // :lang(ko),
+  // :lang(pt-br),
+  // :lang(th),
+  // :lang(tr),
+  :lang(en) {
+    quotes: '\201C' '\201D' '\2018' '\2019' '\201C' '\201D' '\2018' '\2019';
+    /*         “       ”       ‘       ’       “       ”       ‘       ’  */
+  }
+
+  :lang(fr) {
+    quotes: '\AB\202F' '\202F\BB' '\201C\202F' '\202F\201D' '\2018\202F' '\202F\2019';
+    /*         «               »     “                 ”       ‘                 ’   */
+  }
+
+
+  // :lang(cy) {
+  //   quotes: '\2018' '\2019' '\201C' '\201D' '\2018' '\2019' '\201C' '\201D';
+  //   /*         ‘       ’       “       ”       ‘       ’       “       ”  */
+  // }
+
+  // :lang(sq),
+  // :lang(bs) {
+  //   quotes: '\201E' '\201C' '\2018' '\2019' '\201E' '\201C' '\2018' '\2019';
+  //   /*         „       “       ‘       ’       „       “       ‘       ’  */
+  // }
+
+  // :lang(ar) {
+  //   quotes: '\201D' '\201C';
+  //   /*         ”       “  */
+  // }
+
+  // :lang(cs),
+  // :lang(de),
+  // :lang(sk),
+  // :lang(sl),
+  // :lang(sb),
+  // :lang(is) {
+  //   quotes: '\201E' '\201C' '\201A' '\2018' '\201E' '\201C' '\201A' '\2018';
+  //   /*         „       “       ‚       ‘       „       “       ‚       ‘  */
+  // }
 }
-
-:lang(fr) {
-  quotes: '\AB\202F' '\202F\BB' '\201C\202F' '\202F\201D' '\2018\202F' '\202F\2019';
-  /*         «               »     “                 ”       ‘                 ’   */
-}
-
-
-// :lang(cy) {
-//   quotes: '\2018' '\2019' '\201C' '\201D' '\2018' '\2019' '\201C' '\201D';
-//   /*         ‘       ’       “       ”       ‘       ’       “       ”  */
-// }
-
-// :lang(sq),
-// :lang(bs) {
-//   quotes: '\201E' '\201C' '\2018' '\2019' '\201E' '\201C' '\2018' '\2019';
-//   /*         „       “       ‘       ’       „       “       ‘       ’  */
-// }
-
-// :lang(ar) {
-//   quotes: '\201D' '\201C';
-//   /*         ”       “  */
-// }
-
-// :lang(cs),
-// :lang(de),
-// :lang(sk),
-// :lang(sl),
-// :lang(sb),
-// :lang(is) {
-//   quotes: '\201E' '\201C' '\201A' '\2018' '\201E' '\201C' '\201A' '\2018';
-//   /*         „       “       ‚       ‘       „       “       ‚       ‘  */
-// }

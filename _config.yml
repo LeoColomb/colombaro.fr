@@ -5,10 +5,10 @@
 
 # Site info
 title: Créations Colombaro
-description: colombaro.fr
-version: 1.0.0
+version: 3.0.0
 repository: LeoColomb/leocolomb.github.io
 color: "#111111"
+assetsurl: /assets
 # theme: leocolomb-sites
 
 # Author
@@ -16,11 +16,6 @@ author: LeoColomb
 twitter:
   username: LeoColomb
 fullname: Léo Colombaro
-
-# Used for Sitemap.xml and your RSS feed
-url: https://colombaro.fr
-baseurl: ""
-assetsurl: /assets
 
 # Used for SEO
 logo: /assets/icon/favicon.png
@@ -34,82 +29,29 @@ paginate: 10
 paginate_path: blog/page/:num
 sass:
   style: :compressed
+  load_paths:
+    - node_modules
+    - node_modules/**/*/node_modules
 
 # Collections
 collections:
-  trips:
-    output: true
-    permalink: /road/:name/
-  people:
-    output: true
-    permalink: /:name/
-
-# Generation default options
-defaults:
-  -
-    scope:
-      path: ""
-      type: posts
-    values:
-      category: blog
-      layout: post
-      sitemap: false
-      color: "#542437"
-      animation: wipeH
-  -
-    scope:
-      path: road
-    values:
-      category: road
-      layout: trip
-      sitemap: false
-      color: "#53777a"
-      animation: wipeV
-  -
-    scope:
-      path: ""
-      type: people
-    values:
-      category: people
-      layout: person
-      title: À propos
-      sitemap: false
-      color: "#c02942"
-      animation: cerclize
-      icons:
-        - social-github
-        - social-linkedin
-        - social-twitter
-        - social-vimeo
-        - social-behance
-  -
-    scope:
-      path: code
-    values:
-      category: code
-      color: "#d95b43"
-      animation: cerclize
-  -
-    scope:
-      path: bookmarks
-    values:
-      category: bookmarks
-      color: "#ecd078"
-      animation: cerclize
+  sections:
+    output: false
 
 # Plugins
-gems:
+plugins:
   - jemoji
+  - jekyll-github-metadata
   - jekyll-mentions
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-github-metadata
+  - jekyll-octicons
+  - jekyll-avatar
 
 # Excluded files
 exclude:
-  - Gemfile
-  - Gemfile.lock
+  - Gemfile*
   - LICENSE
   - README.md
+  - node_modules
+  - package*

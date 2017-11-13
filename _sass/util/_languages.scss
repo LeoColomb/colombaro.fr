@@ -1,4 +1,3 @@
-
 //
 // LANGUAGES COLORS
 //
@@ -17,27 +16,7 @@ $languages: (
 ) !default;
 
 @each $type, $color in $languages {
-  .repo .#{$type} {
-    @include callout($color);
-    color: smart-scale($color, $amount);
-
-    a {
-      @include button-style($color, auto, foreground($color));
-
-      .icons {
-        fill: smart-scale($color, $amount);
-      }
-    }
-
-    small {
-      padding-top: 0.85em;
-      padding-bottom: 0.85em;
-      color: smart-scale($color, $amount / 2);
-      float: right;
-    }
-
-    .repo-type .icons {
-      fill: smart-scale($color, $amount / 2);;
-    }
+  .label-#{$type} {
+    background-color: $color;
   }
 }

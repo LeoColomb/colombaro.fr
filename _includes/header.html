@@ -21,12 +21,15 @@
     {% endunless %}
   </ul>
 </nav>
-<header role="banner">
+<header role="banner" id="js-scene" class="container-fluid d-flex flex-row flex-items-center flex-justify-center bg-gray-dark bg-shade-gradientb py-6">
   {% if page.category == "home" %}
-  <canvas id="world"></canvas>
-  <img src="{{ site.assetsurl }}/img/cc-logo-home.svg" alt="{{ site.title }}">
+  <div class="content text-center">
+    <img src="{{ site.assetsurl }}/images/logo.svg" alt="{{ site.title }}">
+    <p class="alt-lead text-white mt-2 lh-condensed">
+      {{ site.description }}
+    </p>
+  </div>
   {% else %}
-  <a href="{{ site.url }}" class="hexagon" title="{{ site.title }}"></a>
   <h2>{{ page.title }}{% if page.description %} <small>{{ page.description }}</small>{% endif %}</h2>
   {% endif %}
 </header>

@@ -1,9 +1,0 @@
-
-//
-// MAIN COMPONENT
-//
-
-main {
-  @include flex-grid-row(null, $grid-row-width, 12);
-  @include flex-align(center);
-}

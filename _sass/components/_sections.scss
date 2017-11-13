@@ -1,0 +1,17 @@
+//
+// SECTIONS COMPONENT
+//
+
+.project-container:nth-child(even) {
+  @extend .flex-md-row-reverse;
+}
+
+.network-container:nth-child(even) .CircleBadge {
+  @include breakpoint(lg) {
+    margin-top: -24px;
+  }
+}
+
+.btn-orange {
+  @include btn-solid($text-white, lighten($orange-500, 5%), darken($orange-500, 5%));
+}

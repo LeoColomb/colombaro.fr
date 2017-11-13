@@ -5,31 +5,14 @@
   {% seo %}
   <meta name="author" content="{{ site.author.name }}" />
   <meta name="keywords" lang="fr" content="leo colombaro, colombaro, leocolomb, leo, léo, developpeur, graphisme, leocolombaro, technologie, clmb, numerique, informatique, computer, digital, creation, creations, code, open-souce, php, art, html, css, html5 css3, graphiste, decouverte, recherche, developpement" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="{{ site.assetsurl }}/css/{% if page.style %}{{ page.style }}{% else %}style{% endif %}.css" />
-  <link rel="author" type="text/plain" href="/humans.txt" />
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.assetsurl }}/icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="{{ site.assetsurl }}/icon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="{{ site.assetsurl }}/icon/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="{{ site.assetsurl }}/icon/manifest.json">
-  <link rel="mask-icon" href="{{ site.assetsurl }}/icon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="{{ site.assetsurl }}/icon/favicon.ico">
-  <meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
-  <meta name="theme-color" content="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">
-  <meta name="msapplication-TileColor" content="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}" />
-  <meta name="msapplication-config" content="{{ site.assetsurl }}/icon/browserconfig.xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="{{ site.assetsurl }}/styles/{% if page.style %}{{ page.style }}{% else %}main{% endif %}.css" />
 </head>
 <body{% if page.category %} class="{{ page.category }}"{% endif %}>
-  {% if page.icons %}
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    {% for icon in page.icons %}
-    {% include icons/{{ icon }}.svg %}
-    {% endfor %}
-    </defs>
-  </svg>
-  {% endif %}
+  {% include circle.html %}
   {{ content }}
-  <!--<script src="{{ site.assetsurl }}/js/script.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js"  defer="defer" crossorigin="anonymous"></script>
+  <script src="{{ site.assetsurl }}/scripts/main.js" defer="defer"></script>
   {% include analytics.html %}
 </body>
 </html>

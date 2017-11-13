@@ -1,0 +1,23 @@
+- name: Inter UI
+  link: https://rsms.me/inter/
+  text: "_Inter UI_ is a font for highly legible text on computer screens."
+
+- name: Datalegreya
+  link: http://figs-lab.com/datalegreya
+  text: "_Datalegreya_ is a typeface which can interweave data curves with text."
+
+- name: Selavy
+  link: http://ninastoessinger.com/projects/selavy/
+  text: "_Sélavy_ is a dotted typeface. Simple."
+
+- name: OpenDyslexic
+  link: https://opendyslexic.org
+  text: "_OpenDyslexic_ is a font created to increase readability for readers with dyslexia."
+
+- name: Infini
+  link: http://www.cnap.graphismeenfrance.fr/infini/
+  text: "_Infini_ is a typeface created with ligatures in mind."
+
+- name: CSS Sans
+  link: https://yusugomori.com/projects/css-sans/
+  text: "_CSS Sans_ is the font created by CSS, the programming language for web designing and typesetting."

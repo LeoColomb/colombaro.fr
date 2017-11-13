@@ -1,0 +1,21 @@
+<section class="border-top border-gray-light page-section f4">
+  <div class="container-lg px-3">
+    <h2 class="alt-h1 text-center lh-condensed text-{{ section.color }}">{{ section.title }}</h2>
+    {% if section.description %}
+    <p class="alt-lead text-center mb-6">{{ section.description }}</p>
+    {% endif %}
+  </div>
+
+  {{ section.content }}
+
+  <div class="container-lg px-3">
+    <div class="text-center my-6">
+      <p class="lead mx-auto col-md-8">
+        {{ section.footline }}
+      </p>
+      <a class="btn btn-large btn-{{ section.color }}" href="{{ section.link }}">
+        {% octicon {{ section.icon }} class:"mr-2 v-align-text-bottom" %}{{ section.anchor }}
+      </a>
+    </div>
+  </div>
+</section>

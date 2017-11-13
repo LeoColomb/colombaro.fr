@@ -1,0 +1,27 @@
+- name: GitHub
+  color: "#181717"
+  link: https://github.com/LeoColomb
+
+- name: Twitter
+  color: "#1DA1F2"
+  link: https://twitter.com/LeoColomb
+
+- name: LinkedIn
+  color: "#0077B5"
+  link: https://www.linkedin.com/in/leocolomb
+
+- name: Behance
+  color: "#1769FF"
+  link: https://behance.net/LeoColomb
+
+- name: Vimeo
+  color: "#1AB7EA"
+  link: https://vimeo.com/LeoColomb
+
+- name: Instagram
+  color: "#E4405F"
+  link: https://www.instagram.com/leocolomb/
+
+- name: Snapchat
+  color: "#FFFC00"
+  link: https://www.snapchat.com/add/leocolomb

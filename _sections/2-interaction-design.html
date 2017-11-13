@@ -1,0 +1,54 @@
+---
+title: Interaction Design
+description: Research in user interactions with machines.
+color: purple
+icon: telescope
+link: https://github.com/LeoColomb
+anchor: Explore interactions
+---
+<!-- <div class="page-section">
+  <div class="bg-gray-light mt-md-6 mb-md-6">
+    <div class="container-xl p-responsive py-5 py-md-0">
+      <div class="d-md-flex flex-items-center gutter-xl-spacious">
+        <div class="col-md-6 py-5">
+          <h2 class="alt-h2 mb-3">Link computers and humans</h2>
+          <p>
+            Track updates to your project without complicating your workflow by
+            crosslinking between issues and pull requests anywhere in your GitHub
+            organization. If you associate an issue with a pull request, it will
+            automatically close when the pull request is merged.
+          </p>
+          <p>
+            <a href="https://help.github.com/articles/closing-issues-via-commit-messages/">
+              Learn how to associate issues and pull<span class="no-wrap">requests{% octicon chevron-right class:"ml-2 v-align-text-bottom" %}</span>
+            </a>
+          </p>
+        </div>
+        <div class="col-md-6 col-lg-5 offset-lg-1 mt-md-n6 mb-md-n6">
+          <img src="{{ site.assetsurl }}/images/ixd.png" width="" class="d-block width-fit box-shadow-extra-large bg-white" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container-lg px-3">
+  {% for project in site.data.projects %}
+  <article class="d-md-flex flex-column flex-md-row my-5 project-container">
+    <div class="col-md-6 px-md-5">
+      <img src="{{ site.assetsurl }}/images/projects/{{ project.title | slugify }}.png" alt="{{ project.title }}" width="460" class="d-block width-fit mb-3 mb-md-0">
+    </div>
+    <div class="col-md-6 pl-md-5 flex-md-self-center">
+      <h3 class="alt-h3 mb-2">{{ project.title }}</h3>
+      {{ project.description | markdownify }}
+      <hr class="my-5" style="width: 3em;">
+      <div class="icon-cta f5 col-md-10 mt-3">
+        <p class="text-gray">{% octicon milestone class:"mr-2" %}<time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date_to_long_string }}</time></p>
+      </div>
+      <!-- <div class="icon-cta f5 col-md-10 mb-3">
+        <p class="text-gray">{% octicon person class:"mr-2" %}<time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date_to_long_string }}</time></p>
+      </div> -->
+    </div>
+  </article>
+  {% endfor %}
+</div>
