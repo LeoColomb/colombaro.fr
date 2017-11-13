@@ -7,7 +7,7 @@
   z-index: 999;
   background-color: $white;
   border-radius: 50%;
-  transition: transform 100ms ease-out;
+  transition: transform 100ms ease-out, background-color 200ms ease-out;
 
   top: 2em;
   left: 2em;

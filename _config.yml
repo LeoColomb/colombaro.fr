@@ -48,6 +48,8 @@ plugins:
   - jekyll-octicons
   - jekyll-avatar
 
+strict_front_matter: true
+
 # Excluded files
 exclude:
   - Gemfile*

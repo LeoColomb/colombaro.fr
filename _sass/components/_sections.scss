@@ -12,6 +12,6 @@
   }
 }
 
-.btn-orange {
-  @include btn-solid($text-white, lighten($orange-500, 5%), darken($orange-500, 5%));
+.btn-red {
+  @include btn-solid($text-white, lighten($red-500, 5%), darken($red-500, 5%));
 }

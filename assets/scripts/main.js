@@ -89,3 +89,17 @@ jsScene.addEventListener('mousedown', function (e) {
     .tune({ x: e.pageX, y: e.pageY })
     .replay();
 });
+
+const circle = document.querySelector('.circle');
+emergence.init({
+  offsetTop: circle.getBoundingClientRect().top,
+  offsetBottom: window.innerHeight - circle.getBoundingClientRect().bottom,
+  elemCushion: 0.01,
+  callback: (element, state) => {
+    if (state === 'visible') {
+      circle.classList.add('bg-' + element.getAttribute('data-color'));
+    } else if (state === 'reset') {
+      circle.classList.remove('bg-' + element.getAttribute('data-color'));
+    }
+  }
+});
