@@ -39,8 +39,9 @@ h1, h2, h3, h4 {
 // Correctly wrap code words
 pre, kbd, samp, code {
   @include font-feature-settings("kern" 0, "liga" 1, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1);
-  @include white-space(pre-wrap);
+  //@include white-space(pre-wrap);
   word-wrap: break-word;
+  overflow-x: auto;
 }
 
 mark {
