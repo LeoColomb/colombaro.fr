@@ -33,7 +33,7 @@ anchor: Explore interactions
 </div> -->
 
 <div class="container-lg px-3">
-  {% for project in site.data.projects %}
+  {% for project in site.data.projects reversed %}
   <article class="d-md-flex flex-column flex-md-row my-5 project-container">
     <div class="col-md-6 px-md-5">
       <a href="{{ project.link }}">
