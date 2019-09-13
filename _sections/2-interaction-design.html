@@ -34,7 +34,7 @@ anchor: Explore interactions
 
 <div class="container-lg px-3">
   {% for project in site.data.projects reversed %}
-  <article class="d-md-flex flex-column flex-md-row my-5 project-container">
+  <article class="d-md-flex flex-column flex-md-row my-6 project-container">
     <div class="col-md-6 px-md-5">
       <a href="{{ project.link }}">
         <img src="{{ site.assetsurl }}/images/projects/{{ project.title | slugify }}.svg" alt="{{ project.title }}" width="460" class="d-block width-fit mb-3 mb-md-0">
