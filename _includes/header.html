@@ -1,21 +1,21 @@
 <nav role="navigation" style="display: none;">
-  <ul class="menu">
-    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="{{ site.url }}" itemprop="url" role="button">
-        <h1 itemprop="title">{{ site.title }}</h1>
+  <ul class="menu" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="{{ site.url }}" itemprop="item" role="button">
+        <h1 itemprop="name">{{ site.title }}</h1>
       </a>
     </li>
     {% if page.category and page.category != "home" %}
-    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="{{ site.url }}/{{ page.category }}/" itemprop="url">
-        <span itemprop="title">{{ page.category | capitalize }}</span>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="{{ site.url }}/{{ page.category }}/" itemprop="item">
+        <span itemprop="name">{{ page.category | capitalize }}</span>
       </a>
     </li>
     {% endif %}
     {% unless page.category == page.title | slugify %}
-    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="{{ site.url }}{{ page.url }}" itemprop="url">
-        <span itemprop="title">{{ page.title }}</span>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="{{ site.url }}{{ page.url }}" itemprop="item">
+        <span itemprop="name">{{ page.title }}</span>
       </a>
     </li>
     {% endunless %}
