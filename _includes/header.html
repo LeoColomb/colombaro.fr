@@ -14,6 +14,7 @@
       <meta itemprop="position" content="2" />
     </li>
     {% endif %}
+    {% if page.title %}
     {% unless page.category == page.title | slugify %}
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <a href="{{ site.url }}{{ page.url }}" itemprop="item">
@@ -22,6 +23,7 @@
       <meta itemprop="position" content="3" />
     </li>
     {% endunless %}
+    {% endif %}
   </ul>
 </nav>
 <header role="banner" id="js-scene" class="container-fluid d-flex flex-row flex-items-center flex-justify-center bg-gray-dark bg-shade-gradientb py-6">
