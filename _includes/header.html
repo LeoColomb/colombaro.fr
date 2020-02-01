@@ -4,12 +4,14 @@
       <a href="{{ site.url }}" itemprop="item" role="button">
         <h1 itemprop="name">{{ site.title }}</h1>
       </a>
+      <meta itemprop="position" content="1" />
     </li>
     {% if page.category and page.category != "home" %}
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <a href="{{ site.url }}/{{ page.category }}/" itemprop="item">
         <span itemprop="name">{{ page.category | capitalize }}</span>
       </a>
+      <meta itemprop="position" content="2" />
     </li>
     {% endif %}
     {% unless page.category == page.title | slugify %}
@@ -17,6 +19,7 @@
       <a href="{{ site.url }}{{ page.url }}" itemprop="item">
         <span itemprop="name">{{ page.title }}</span>
       </a>
+      <meta itemprop="position" content="3" />
     </li>
     {% endunless %}
   </ul>
