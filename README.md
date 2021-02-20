@@ -17,14 +17,6 @@
 
 See [GitHub Guides](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) for more details.
 
-## Technologies
-
-Built on:
-* [GitHub Pages](https://pages.github.com/)
-* [Jekyll](https://jekyllrb.com/)
-* [Primer](http://primercss.io/)
-* [mo.js](http://mojs.io/)
-
 ## License
 
 Code licensed under [MIT License](LICENSE) © [Léo Colombaro](https://colombaro.fr)  
