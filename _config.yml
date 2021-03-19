@@ -50,6 +50,9 @@ plugins:
 
 strict_front_matter: true
 
+include:
+ - .well-known
+
 # Excluded files
 exclude:
   - Gemfile*
