@@ -2,7 +2,7 @@
   "private": true,
   "dependencies": {
     "primer-css": "^9.6.0",
-    "simple-icons": "^6.0.0"
+    "simple-icons": "^7.0.0"
   },
   "scripts": {
     "postupdate": "cp -r node_modules/* _sass/"
