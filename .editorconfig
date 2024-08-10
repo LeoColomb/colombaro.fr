@@ -1,7 +1,6 @@
-# For more information about the properties used in
-# this file, please see the EditorConfig documentation:
-# http://editorconfig.org/
+# EditorConfig is awesome: https://EditorConfig.org
 
+# top-most EditorConfig file
 root = true
 
 [*]
@@ -11,6 +10,3 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
-
-[*.md]
-trim_trailing_whitespace = false

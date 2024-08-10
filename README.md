@@ -7,17 +7,15 @@
 
 * Install dependencies
   ```console
-  bundle install
-  ```
-  
-* Build with Jekyll
-  ```console
-  bundle exec jekyll serve
+  npm install
   ```
 
-See [GitHub Guides](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) for more details.
+* Build and watch
+  ```console
+  npm run start
+  ```
 
 ## License
 
-Code licensed under [MIT License](LICENSE) © [Léo Colombaro](https://colombaro.fr)  
+Code licensed under [MIT License](LICENSE) © [Léo Colombaro](https://colombaro.fr)
 Content licensed under [Creative Commons License BY 4.0](https://creativecommons.org/licenses/by/4.0/)
