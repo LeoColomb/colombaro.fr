@@ -1,4 +1,4 @@
-# [![colombaro.fr](assets/favicons/favicon.svg)](https://colombaro.fr)
+# [![colombaro.fr](static/favicons/favicon.svg)](https://colombaro.fr)
 
 > Unexpected interactions
 > The source code of [Léo Colombaro](https://colombaro.fr)' personal website.
