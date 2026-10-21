@@ -2,7 +2,7 @@
   "subject": "acct:*@colombaro.fr",
   "links": [
     {
-      "rel": "https://openid.net/specs/connect/1.0/issuer",
+      "rel": "http://openid.net/specs/connect/1.0/issuer",
       "href": "https://login.infomaniak.com"
     }
   ]
