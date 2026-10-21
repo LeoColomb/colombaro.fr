@@ -1,6 +1,8 @@
 name: Build Jekyll site
 on:
   push:
+    branches:
+      - '*'
  
 permissions:
   contents: read
